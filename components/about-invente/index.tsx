@@ -7,8 +7,8 @@ const AboutInvente = () => {
       <Heading title="About Invente" />
       <p className="text-white text-sm lg:text-xl font-ubuntu my-8">
         While the present can be considered as unprecedented at its best, SSN
-        offers a platform to showcase your talents as a surety. Presenting to
-        you the 6th edition of the annual techfest - Invente.
+        and SNUC offers a platform to showcase your talents as a surety.
+        Presenting to you our annual techfest - Invente.
         <br />
         <br />
         Invente - a nexus of Innovation, Creativity and Entertainment, is a

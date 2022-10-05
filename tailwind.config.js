@@ -8,14 +8,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
-    "bg-sky-200",
-    "bg-sky-300",
-    "bg-sky-400",
     "bg-sky-500",
-    "bg-sky-600",
-    "bg-sky-700",
-    "bg-sky-800",
-    "bg-sky-900",
+    "bg-teal-500",
+    "bg-green-500",
+    "bg-amber-500",
+    "bg-rose-500",
+    "bg-pink-500",
+    "bg-fuchsia-500",
+    "bg-violet-500",
+    "bg-indigo-500",
+    "bg-blue-500",
   ],
   theme: {
     extend: {

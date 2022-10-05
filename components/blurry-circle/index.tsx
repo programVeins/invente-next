@@ -27,7 +27,7 @@ const BlurryCircle = () => {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [activeColor]);
 
   return (
     <div className="w-screen flex justify-center">

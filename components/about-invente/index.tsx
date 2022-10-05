@@ -24,3 +24,5 @@ const AboutInvente = () => {
     </div>
   );
 };
+
+export default AboutInvente;

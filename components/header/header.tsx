@@ -34,42 +34,26 @@ const Header = () => {
         </div>
       </div>
       <div className="hidden lg:flex items-center gap-10 justify-center w-1/2 font-ubuntu ">
-        <Link
-          className="hover:tracking-wide-wide hover:font-bold transition-all duration-300 hover:text-2xl"
-          href="/coming-soon"
-        >
-          Events
-        </Link>
-        <Link
-          className="hover:tracking-wide-wide hover:font-bold transition-all duration-300 hover:text-2xl"
-          href="/coming-soon"
-        >
-          Workshops
-        </Link>
-        <Link
-          className="hover:tracking-wide-wide hover:font-bold transition-all duration-300 hover:text-2xl"
-          href="/coming-soon"
-        >
-          Hackathon
-        </Link>
-        <Link
-          className="hover:tracking-wide-wide hover:font-bold transition-all duration-300 hover:text-2xl"
-          href="/coming-soon"
-        >
-          Schedule
-        </Link>
-        <Link
-          className="hover:tracking-wide-wide hover:font-bold transition-all duration-300 hover:text-2xl"
-          href="/coming-soon"
-        >
-          Sponsors
-        </Link>
-        <Link
-          className="hover:tracking-wide-wide hover:font-bold transition-all duration-300 hover:text-2xl"
-          href="/coming-soon"
-        >
-          Passes
-        </Link>
+        <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
+          <Link className="" href="/coming-soon">
+            Events
+          </Link>
+        </div>
+        <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
+          <Link href="/coming-soon">Workshops</Link>
+        </div>
+        <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
+          <Link href="/coming-soon">Hackathon</Link>
+        </div>
+        <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
+          <Link href="/coming-soon">Schedule</Link>
+        </div>
+        <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
+          <Link href="/coming-soon">Sponsors</Link>
+        </div>
+        <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
+          <Link href="/coming-soon">Passes</Link>
+        </div>
       </div>
       <div className="hidden lg:flex w-1/4"></div>
       {/* <div className="hidden lg:flex gap-10 w-1/4 justify-end">

@@ -10,6 +10,52 @@ const Header = () => {
   return (
     <header className="flex fixed top-0 bg-black/30 backdrop-blur-lg z-10 text-white w-full justify-between py-4 px-4 xl:px-10 lg:py-6 items-center">
       <div className="w-full lg:w-1/4 flex justify-between lg:justify-start items-center">
+        {showingMenu && (
+          <div className="absolute duration-300 transition-all flex flex-col z-30 w-full left-0 top-20 items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg">
+            <div
+              onClick={() => setShowingMenu(false)}
+              className="font-ubuntu text-center my-4 text-xl"
+            >
+              <Link href="/">Home</Link>
+            </div>
+            <div
+              onClick={() => setShowingMenu(false)}
+              className="font-ubuntu text-center my-4 text-xl"
+            >
+              <Link href="/coming-soon">Events</Link>
+            </div>
+            <div
+              onClick={() => setShowingMenu(false)}
+              className="font-ubuntu text-center my-4 text-xl"
+            >
+              <Link href="/coming-soon">Workshops</Link>
+            </div>
+            <div
+              onClick={() => setShowingMenu(false)}
+              className="font-ubuntu text-center my-4 text-xl"
+            >
+              <Link href="/coming-soon">Hackathon</Link>
+            </div>
+            <div
+              onClick={() => setShowingMenu(false)}
+              className="font-ubuntu text-center my-4 text-xl"
+            >
+              <Link href="/coming-soon">Schedule</Link>
+            </div>
+            <div
+              onClick={() => setShowingMenu(false)}
+              className="font-ubuntu text-center my-4 text-xl"
+            >
+              <Link href="/coming-soon">Sponsors</Link>
+            </div>
+            <div
+              onClick={() => setShowingMenu(false)}
+              className="font-ubuntu text-center my-4 text-xl"
+            >
+              <Link href="/coming-soon">Passes</Link>
+            </div>
+          </div>
+        )}
         <i
           className="w-1/6 lg:hidden cursor-pointer"
           onClick={() => setShowingMenu(!showingMenu)}

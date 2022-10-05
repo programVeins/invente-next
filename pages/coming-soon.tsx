@@ -14,7 +14,7 @@ const ComingSoon = () => {
 
         <section>
           <div className="">
-            <h1 className="text-7xl text-white animate-pulse flex h-screen justify-center items-center font-azonix">
+            <h1 className="text-3xl lg:text-7xl text-white animate-pulse flex h-screen justify-center items-center font-azonix">
               <p className="awesome-stuff">Coming Soon</p>
             </h1>
           </div>

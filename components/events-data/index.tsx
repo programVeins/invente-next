@@ -158,7 +158,7 @@ const EventsData = () => {
 
           <div className="my-4 w-full">
             {sections.map((section, index) => (
-              <section className="flex gap-10 items-center w-full">
+              <section key={index} className="flex gap-10 items-center w-full">
                 <input
                   required
                   name="sectionName"

@@ -17,11 +17,8 @@ const EventGrid: FC<Props> = ({ depts }) => {
       <Heading title="events" />
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-10 place-items-center my-10">
         {depts.map((dept, i) => (
-          <Link href={dept.link}>
-            <div
-              key={i}
-              className="relative scale-95 hover:scale-110 transition-all ease-out cursor-pointer duration-300"
-            >
+          <Link key={i} href={dept.link}>
+            <div className="relative scale-95 hover:scale-110 transition-all ease-out cursor-pointer duration-300">
               <img className="m-0 p-0 " src={dept.img} />
               <div className="absolute text-white bottom-5 justify-center flex items-center left-0 right-0 mx-auto z-10 bg-black/30 backdrop-blur-md w-3/4 rounded-full  h-10">
                 <p className="text-xs lg:text-2xl font-aspace font-bold">

@@ -20,7 +20,7 @@ const CountDown = () => {
 
         const daysDiff = Math.trunc(msDiff / (1000 * 3600 * 24));
         setdaysDiff(daysDiff);
-        sethoursDiff(24 - new Date().getHours());
+        sethoursDiff(23 - new Date().getHours());
         setminutesDiff(59 - new Date().getMinutes());
         setsecondsDiff(59 - new Date().getSeconds());
       }, 1000);
@@ -31,22 +31,22 @@ const CountDown = () => {
   });
 
   return (
-    <div className="grid w-1/2 mx-auto grid-cols-4 text-white font-azonix text-3xl place-items-center">
-      <div className="h-28 w-40 flex items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-xl backdrop-blur-lg">
+    <div className="flex gap-4 px-2 lg:grid w-full lg:w-1/2 mx-auto lg:grid-cols-4 text-white font-azonix text-lg lg:text-3xl place-items-center">
+      <div className="lg:h-28 lg:w-40 p-4 w-1/4 flex lg:flex-row flex-col items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg">
         <p>{daysDiff}</p>
-        <p className="text-sm mx-2">Days</p>
+        <p className="text-xs lg:text-sm lg:mx-2">Days</p>
       </div>
-      <div className="h-28 w-40 flex items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-xl backdrop-blur-lg">
+      <div className="lg:h-28 lg:w-40 p-4 w-1/4 flex lg:flex-row flex-col items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg">
         <p>{hoursDiff}</p>
-        <p className="text-sm mx-2">Hours</p>
+        <p className="text-xs lg:text-sm lg:mx-2">Hours</p>
       </div>
-      <div className="h-28 w-40 flex items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-xl backdrop-blur-lg">
+      <div className="lg:h-28 lg:w-40 p-4 w-1/4 flex lg:flex-row flex-col items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg">
         <p>{minutesDiff}</p>
-        <p className="text-sm mx-2">Minutes</p>
+        <p className="text-xs lg:text-sm lg:mx-2">Minutes</p>
       </div>
-      <div className="h-28 w-40 flex items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-xl backdrop-blur-lg">
+      <div className="lg:h-28 lg:w-40 p-4 w-1/4 flex lg:flex-row flex-col items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg">
         <p>{secondsDiff}</p>
-        <p className="text-sm mx-2">Seconds</p>
+        <p className="text-xs lg:text-sm lg:mx-2">Seconds</p>
       </div>
     </div>
   );

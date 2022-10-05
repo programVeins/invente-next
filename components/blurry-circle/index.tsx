@@ -32,7 +32,7 @@ const BlurryCircle = () => {
   return (
     <div className="w-screen flex justify-center">
       <div
-        className={`rounded-full h-[600px] w-[600px] transition-colors duration-1000 ${colors[activeColor]}  blur-[300px] absolute -bottom-80`}
+        className={`rounded-full h-[600px] w-screen lg:w-[600px] transition-colors duration-1000 ${colors[activeColor]}  blur-[300px] absolute -bottom-80 blurry-circle`}
       ></div>
     </div>
   );

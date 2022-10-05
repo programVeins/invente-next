@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #020015;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.14);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020015; /* color of the tracking area */
+}
+
+@font-face {
+  font-family: "Azonix";
+  src: url("../public/fonts/Azonix.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aspace";
+  src: url("../public/fonts/Aspace.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Spantaran";
+  src: url("../public/fonts/Spantaran.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.awesome-stuff {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  background: url(/images/back.png);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s ease-in-out infinite backwards;
+  animation-duration: 20000ms;
+}
+
+@keyframes back {
+  50% {
+    background-position: 2000px 0;
+    transform: scale(150%);
+  }
+
+  100% {
+    background-position: 0 0;
+    transform: scale(100%);
+  }
+}
+
+.caret-move {
+  animation: move 2s ease-in-out infinite;
+}
+@keyframes move {
+  50% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.blurry-circle {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}

@@ -10,6 +10,7 @@ interface Props {
 const Button: FC<Props> = ({ action, sub, classes, children }) => {
   return (
     <button
+      type="button"
       onClick={action}
       className={
         `transition-all hover:animate-none` +

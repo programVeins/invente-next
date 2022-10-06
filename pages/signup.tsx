@@ -6,20 +6,22 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Header from "../components/header/header";
 import { toast } from "react-hot-toast";
+import axios from "axios";
 
 type Props = {};
 
 function SignUp({}: Props) {
     const [store, setStore] = useState({
-        name: "",
+        full_name: "",
         email: "",
-        phone: "",
-        college: "",
+        phone_number: "",
+        college_name: "",
         department: "",
         password: "",
         isSuccess: false,
         loading: true,
         errorMessage: "",
+        year: 0,
     });
 
     const { signup, user } = useAuth();
@@ -46,12 +48,12 @@ function SignUp({}: Props) {
                     </label>
                     <input
                         required
-                        name="name"
+                        name="full_name"
                         type="text"
                         className="bg-white/10 w-3/4 shadow-inner shadow-black/50 backdrop-blur-md rounded-md text-white px-4 py-2 mt-2 mb-4"
-                        value={store.name}
+                        value={store.full_name}
                         onChange={(e) =>
-                            setStore({ ...store, name: e.target.value })
+                            setStore({ ...store, full_name: e.target.value })
                         }
                     />
 
@@ -73,12 +75,12 @@ function SignUp({}: Props) {
                     </label>
                     <input
                         required
-                        name="phone"
+                        name="phone_number"
                         type="text"
                         className="bg-white/10 w-3/4 shadow-inner shadow-black/50 backdrop-blur-md rounded-md text-white px-4 py-2 mt-2 mb-4"
-                        value={store.phone}
+                        value={store.phone_number}
                         onChange={(e) =>
-                            setStore({ ...store, phone: e.target.value })
+                            setStore({ ...store, phone_number: e.target.value })
                         }
                     />
                     <label className="text-white text-left w-3/4 font-ubuntu">
@@ -89,9 +91,25 @@ function SignUp({}: Props) {
                         name="college"
                         type="text"
                         className="bg-white/10 w-3/4 shadow-inner shadow-black/50 backdrop-blur-md rounded-md text-white px-4 py-2 mt-2 mb-4"
-                        value={store.college}
+                        value={store.college_name}
                         onChange={(e) =>
-                            setStore({ ...store, college: e.target.value })
+                            setStore({ ...store, college_name: e.target.value })
+                        }
+                    />
+                    <label className="text-white text-left w-3/4 font-ubuntu">
+                        Year
+                    </label>
+                    <input
+                        required
+                        name="year"
+                        type="number"
+                        className="bg-white/10 w-3/4 shadow-inner shadow-black/50 backdrop-blur-md rounded-md text-white px-4 py-2 mt-2 mb-4"
+                        value={store.year}
+                        onChange={(e) =>
+                            setStore({
+                                ...store,
+                                year: parseInt(e.target.value),
+                            })
                         }
                     />
                     <label className="text-white text-left w-3/4 font-ubuntu">
@@ -126,9 +144,32 @@ function SignUp({}: Props) {
                         action={async () => {
                             console.log(store.email, store.password);
                             try {
-                                await signup(store.email, store.password);
+                                const creds = await signup(
+                                    store.email,
+                                    store.password
+                                );
                                 store.isSuccess = true;
-                                toast.success("Signed Up Successfully");
+                                try {
+                                    await axios.post(
+                                        window.location.origin +
+                                            "/api/user/signup",
+                                        {
+                                            ...store,
+                                            password: undefined,
+                                        },
+                                        {
+                                            headers: {
+                                                Authorization: `Bearer ${await creds.user?.getIdToken()}`,
+                                            },
+                                        }
+                                    );
+                                    toast.success("Signed Up Successfully");
+                                } catch (error) {
+                                    console.log(error);
+                                    toast.error(
+                                        "Unknown Error Occured. Reach out to Support"
+                                    );
+                                }
                             } catch (error) {
                                 console.log(
                                     (error as FirebaseError).message

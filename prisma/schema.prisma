@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int            @default(autoincrement())
+  email        String         @id
+  phone_number String
+  full_name    String
+  college_name String
+  department   String
+  verified     Boolean
+  firebase_id  String
+  year 	   Int
+  created_at   DateTime       @default(now())
+  Event_User   Event_User?
+  passes       Pass[]
+  Registration Registration[]
+}
+
+model Pass {
+  id         Int    @default(autoincrement())
+  email      String
+  pass       pass
+  created_at String
+  userEmail  String
+  user       User   @relation(fields: [userEmail], references: [email])
+
+  @@id([email, pass])
+}
+
+model Event {
+  event_name   String
+  id           String         @id
+  pass         pass
+  passEmail    String
+  passPass     String
+  Event_User   Event_User[]
+  Registration Registration[]
+}
+
+model Registration {
+  id        Int    @id @default(autoincrement())
+  userEmail String
+  eventId   String
+  event     Event  @relation(fields: [eventId], references: [id])
+  user      User   @relation(fields: [userEmail], references: [email])
+}
+
+model Event_User {
+  userEmail String @unique
+  eventId   String
+  Event     Event  @relation(fields: [eventId], references: [id])
+  User      User   @relation(fields: [userEmail], references: [email])
+}
+
+enum pass {
+  tech
+  nonTech
+  bmeHack
+  cseHack
+  wsCentral
+  wsBme
+}

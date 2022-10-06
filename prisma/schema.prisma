@@ -16,9 +16,8 @@ model User {
   department   String
   verified     Boolean
   firebase_id  String
-  year 	   Int
+  year         Int
   created_at   DateTime       @default(now())
-  Event_User   Event_User?
   passes       Pass[]
   Registration Registration[]
 }
@@ -36,27 +35,27 @@ model Pass {
 
 model Event {
   event_name   String
-  id           String         @id
+  id           Int         @id
   pass         pass
-  passEmail    String
-  passPass     String
-  Event_User   Event_User[]
+  department String
+  size String?
+  venue String? @default("TBD")
+  time String? @default("00:00")
+  sections Json? 
   Registration Registration[]
 }
 
 model Registration {
   id        Int    @id @default(autoincrement())
   userEmail String
-  eventId   String
+  eventId   Int
   event     Event  @relation(fields: [eventId], references: [id])
   user      User   @relation(fields: [userEmail], references: [email])
 }
 
-model Event_User {
-  userEmail String @unique
-  eventId   String
-  Event     Event  @relation(fields: [eventId], references: [id])
-  User      User   @relation(fields: [userEmail], references: [email])
+model EventHead {
+  eventId   Int @unique
+  userEmail String 
 }
 
 enum pass {
@@ -66,4 +65,10 @@ enum pass {
   cseHack
   wsCentral
   wsBme
+}
+
+enum type {
+  workshop
+  hackathon
+  event
 }

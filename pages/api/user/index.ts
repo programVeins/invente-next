@@ -1,13 +1,12 @@
-import { DecodedIdToken } from "firebase-admin/lib/auth/token-verifier";
 import type { NextApiResponse } from "next";
 import { ExtendedNextApiRequest, withAuth } from "../../../lib/withAuth";
 
-const handler = (
-    extReq: ExtendedNextApiRequest,
-    res: NextApiResponse<DecodedIdToken>
-) => {
-    const user = extReq.user;
-    res.send(user);
+const handler = (extReq: ExtendedNextApiRequest, res: NextApiResponse) => {
+    if (extReq.req.method === "GET") {
+        res.send(extReq.user);
+    } else {
+        res.status(405).json({ error: "Method not allowed" });
+    }
 };
 
 export default withAuth(handler);

@@ -5,6 +5,7 @@ import { Department, Section } from "../../types";
 import Button from "../button";
 import { Prisma } from "@prisma/client";
 import { useAuth } from "../../lib/authContext";
+import { toast } from "react-hot-toast";
 
 const EventsData = () => {
     const [data, setData] = useState<Event>({
@@ -294,6 +295,7 @@ const EventsData = () => {
                                     },
                                 }
                             );
+                            toast.success("Event Updated Successfully");
                         }}
                     >
                         Submit Event details

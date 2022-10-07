@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import React from "react";
+import React, { useEffect } from "react";
 import AboutInvente from "../components/about-invente";
 import BlurryCircle from "../components/blurry-circle";
 import BlurryJumbotron from "../components/blurry-jumbotron";
@@ -8,8 +8,18 @@ import EventGrid from "../components/event-grid";
 import Footer from "../components/footer";
 import Header from "../components/header/header";
 import VectorsBG from "../components/vectors-bg";
+import { useAuth } from "../lib/authContext";
 
 const Home: NextPage = () => {
+    const { user } = useAuth();
+
+    useEffect(() => {
+        if (user) {
+            user.getIdToken().then((token) => {
+                console.log(token);
+            });
+        }
+    }, [user]);
     const depts = [
         {
             name: "CSE",

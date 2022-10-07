@@ -35,14 +35,16 @@ model Pass {
 
 model Event {
   event_name   String
-  id           Int         @id
+  id           Int            @id
   pass         pass
-  department String
-  size String?
-  venue String? @default("TBD")
-  time String? @default("00:00")
-  sections Json? 
+  department   String
+  size         String?
+  venue        String?        @default("TBD")
+  time         String?        @default("TBD")
+  sections     Json?
+  description  String?
   Registration Registration[]
+  EventHead    EventHead?
 }
 
 model Registration {
@@ -54,8 +56,9 @@ model Registration {
 }
 
 model EventHead {
-  eventId   Int @unique
-  userEmail String 
+  eventId   Int    @unique
+  userEmail String
+  event     Event  @relation(fields: [eventId], references: [id])
 }
 
 enum pass {

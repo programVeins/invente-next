@@ -1,33 +1,22 @@
-export enum EventType {
-  Individual = "Individual",
-  Team = "Team",
-  TeamOrSolo = "Team Or Solo",
+export enum EventPass {
+    Technical = "Technical",
+    NonTechnical = "Non-Technical",
+    Workshop = "Workshop",
+    Hackathon = "Hackathon",
 }
 
 export enum Department {
-  CSE = "CSE",
-  IT = "IT",
-  ECE = "ECE",
-  EEE = "EEE",
-  MECH = "MECH",
-  CIVIL = "CIVIL",
-  CHEM = "CHEM",
-  BME = "BME",
-}
-
-export interface Event {
-  id: string;
-  title: string;
-  desc: string;
-  type: EventType;
-  teamSize: string;
-  dept: Department;
-  venue: string;
-  time: string;
-  meta: Record<string, any>;
+    CSE = "Computer Science and Engineering",
+    IT = "Information Technology",
+    ECE = "ECE",
+    EEE = "Electrical and Electronics",
+    MECH = "Mechanical",
+    CIVIL = "Civil",
+    CHEM = "Chemical",
+    BME = "Biomedical",
 }
 
 export interface Section {
-  sectionName: string;
-  sectionValue: string | string[];
+    sectionName: string;
+    sectionData: string;
 }

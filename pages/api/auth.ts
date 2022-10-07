@@ -11,7 +11,6 @@ export default async function handler(
         "https://api.sheety.co/17b705cfadfc1b02dbe639fe4710bafa/eventHeadsInventeWebsite/sheet1"
     );
 
-    await prisma.eventHead.deleteMany();
     for (const row of data.data.sheet1) {
         const findEvent = await prisma.event.findFirst({
             where: {

@@ -1,3 +1,4 @@
+import { pass } from "@prisma/client";
 import type { NextApiResponse } from "next";
 import { prisma } from "../../lib/prisma";
 import { ExtendedNextApiRequest, withAuth } from "../../lib/withAuth";
@@ -24,7 +25,43 @@ const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
             });
         }
     } else if (req.req.method === "POST") {
-        res.status(405).json({ error: "Method not allowed" });
+        const user = req.user;
+        const reqBody = req.req.body;
+        console.log(user);
+        const findEvent = await prisma.event.findFirst({
+            where: {
+                EventHead: {
+                    userEmail: user.email,
+                },
+            },
+        });
+        if (findEvent) {
+            const data = await prisma.event.update({
+                where: {
+                    id: findEvent.id,
+                },
+                data: {
+                    event_name: reqBody.event_name,
+                    pass: reqBody.pass,
+                    sections: reqBody.sections,
+                    venue: reqBody.venue,
+                    time: reqBody.time,
+                    size: reqBody.size,
+                    description: reqBody.description,
+                    department: reqBody.department,
+                },
+            });
+            res.send({
+                ok: true,
+                message: "Event details updated",
+                data: data,
+            });
+        } else {
+            res.send({
+                message: "You are not an event head",
+                ok: false,
+            });
+        }
     }
 };
 

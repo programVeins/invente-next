@@ -4,11 +4,29 @@ import Link from "next/link";
 import Button from "../button";
 import { useAuth } from "../../lib/authContext";
 import { toast } from "react-hot-toast";
+import axios from "axios";
 
 const Header = () => {
     const nav = useRouter();
 
     const { user, logout } = useAuth();
+    const [secret, setSecret] = useState(false);
+
+    useEffect(() => {
+        const async = async () => {
+            try {
+                const res = await axios.get("/api/eventDeets", {
+                    headers: {
+                        Authorization: `Bearer ${await user?.getIdToken()}`,
+                    },
+                });
+                setSecret(res.data.ok);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        async().then(() => {});
+    }, []);
 
     const [showingMenu, setShowingMenu] = useState(false);
     return (
@@ -105,8 +123,16 @@ const Header = () => {
                     <Link href="/coming-soon">Passes</Link>
                 </div>
             </div>
-            <div className="hidden lg:flex w-1/4"></div>
-            <div className="hidden lg:flex gap-10 w-1/4 justify-end">
+            <div className="hidden lg:flex gap-10 w-2/3 justify-end">
+                {secret && (
+                    <Button
+                        action={async () => {
+                            nav.push("/events-data");
+                        }}
+                    >
+                        Events Form
+                    </Button>
+                )}
                 <Button
                     action={async () => {
                         if (user) {

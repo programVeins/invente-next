@@ -11,6 +11,7 @@ const Header = () => {
 
     const { user, logout } = useAuth();
     const [secret, setSecret] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         const async = async () => {
@@ -138,6 +139,8 @@ const Header = () => {
                         if (user) {
                             try {
                                 await logout();
+                                setSecret(false);
+                                router.push("/");
                                 toast.success("Logged out successfully");
                             } catch (error) {
                                 toast.error("Error logging out");

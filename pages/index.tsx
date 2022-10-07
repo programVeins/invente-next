@@ -76,6 +76,12 @@ const Home: NextPage = () => {
                                 src="/vectors/invente.svg"
                                 className="lg:scale-50"
                             />
+                            <div className="mt-0 sm:-mt-10 lg:-mt-20 xl:-mt-32 text-sm mg:text-lg lg:text-2xl font-aspace text-white/80">
+                                Create. Elevate. Sustain.
+                            </div>
+                            <div className="mt-2 mb-20 text-sm mg:text-lg lg:text-2xl font-aspace text-white/80">
+                                4th & 5th November
+                            </div>
                         </div>
                         <CountDown />
                         <div className="mt-40">

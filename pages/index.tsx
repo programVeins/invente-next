@@ -61,10 +61,15 @@ const Home: NextPage = () => {
         <BlurryCircle />
 
         <section>
-          <div className="">
-            <div className="flex flex-col justify-center items-center mt-40 lg:mt-20">
-              <img src="/vectors/invente.svg" className="lg:scale-50" />
+          <div className="text-center mt-40 lg:mt-20">
+            <img src="/vectors/invente.svg" className="scale-75 lg:scale-50" />
+            <div className="mt-0 sm:-mt-10 lg:-mt-20 xl:-mt-32 text-sm mg:text-lg lg:text-2xl font-aspace text-white/80">
+              Create. Elevate. Sustain.
             </div>
+            <div className="mt-2 mb-20 text-sm mg:text-lg lg:text-2xl font-aspace text-white/80">
+              4th & 5th November
+            </div>
+
             <CountDown />
             <div className="mt-40">
               <BlurryJumbotron />

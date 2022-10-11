@@ -72,8 +72,20 @@ const Home: NextPage = () => {
         <section>
           <div className="">
             <div className="flex flex-col justify-center items-center mt-40 lg:mt-20">
-              <img src="/vectors/invente.svg" className="lg:scale-50" />
-              <div className="mt-0 sm:-mt-10 lg:-mt-20 xl:-mt-32 text-sm mg:text-lg lg:text-2xl font-aspace text-white/80">
+              <div className="hidden md:flex items-start lg:-mt-20 w-1/2 justify-center">
+                <img src="/vectors/ssn.svg" className="w-80 h-80 lg:scale-50" />
+                <img src="/vectors/invente.svg" className="mt-[15rem]" />
+                <img src="/vectors/snu.svg" className="w-80 h-80 lg:scale-50" />
+              </div>
+              <div className="flex justify-between w-full md:hidden -mt-20 px-2">
+                <img src="/vectors/ssn.svg" className="w-28 h-28" />
+                <img src="/vectors/snu.svg" className="w-28 h-28" />
+              </div>
+              <img
+                src="/vectors/invente.svg"
+                className="md:hidden px-2 scale-95"
+              />
+              <div className="mt-0 text-sm mg:text-lg lg:text-2xl font-aspace text-white/80">
                 Create. Elevate. Sustain.
               </div>
               <div className="mt-2 mb-20 text-sm mg:text-lg lg:text-2xl font-aspace text-white/80">

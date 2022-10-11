@@ -92,7 +92,9 @@ function SignUp({}: Props) {
               setStore({ ...store, college_name: e.target.value })
             }
           />
-          <label className="text-white text-left w-3/4 font-ubuntu">Year</label>
+          <label className="text-white text-left md:w-3/4 font-ubuntu">
+            Year
+          </label>
           <input
             required
             name="year"

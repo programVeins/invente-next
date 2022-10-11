@@ -30,9 +30,18 @@ const Header = () => {
   }, []);
 
   const [showingMenu, setShowingMenu] = useState(false);
+
+  useEffect(() => {
+    if (showingMenu) {
+      document.body.classList.add("stop-scrolling");
+    } else {
+      document.body.classList.remove("stop-scrolling");
+    }
+  }, [showingMenu]);
+
   return (
     <header className="flex fixed top-0 bg-black/30 backdrop-blur-lg z-10 menu-nav text-white w-full justify-between py-4 px-4 xl:px-10 lg:py-6 items-center">
-      <div className="w-full lg:w-1/4 flex justify-between lg:justify-start items-center">
+      <div className="w-full lg:hidden flex justify-between lg:justify-start items-center">
         {showingMenu && (
           <div className="absolute duration-300 transition-all flex flex-col z-30 w-full left-0 top-0 h-screen items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-gray-900 rounded-md lg:rounded-xl">
             <div
@@ -89,20 +98,26 @@ const Header = () => {
           ></ion-icon>`,
           }}
         ></i>
-        <div className="flex lg:w-full items-center w-1/2 md:w-2/5">
-          <Link href="/" className="">
-            <div className="cursor-pointer w-1/2 lg:w-1/3">
-              <img src="/images/ssn.png" />
-            </div>
-          </Link>
-          <Link href="/" className="">
-            <div className="cursor-pointer w-1/2 lg:w-1/3">
-              <img src="/images/snu.png" />
-            </div>
-          </Link>
-        </div>
+        <Button
+          action={async () => {
+            if (user) {
+              try {
+                await logout();
+                setSecret(false);
+                router.push("/");
+                toast.success("Logged out successfully");
+              } catch (error) {
+                toast.error("Error logging out");
+              }
+            } else {
+              nav.push("/signup");
+            }
+          }}
+        >
+          {user ? "Logout" : "Register"}
+        </Button>
       </div>
-      <div className="hidden lg:flex items-center gap-10 justify-center w-1/2 font-ubuntu ">
+      <div className="hidden w-full lg:flex items-center gap-10 justify-start font-ubuntu ">
         <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
           <Link className="" href="/coming-soon">
             Events

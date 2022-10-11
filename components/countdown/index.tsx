@@ -4,7 +4,7 @@ const CountDown = () => {
   const inventeDate = new Date();
   inventeDate.setFullYear(2022);
   inventeDate.setMonth(10);
-  inventeDate.setDate(4);
+  inventeDate.setDate(3);
   inventeDate.setHours(0);
   inventeDate.setMinutes(0);
 

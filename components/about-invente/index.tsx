@@ -6,20 +6,18 @@ const AboutInvente = () => {
     <div className="my-20">
       <Heading title="About Invente" />
       <p className="text-white text-sm lg:text-xl font-ubuntu my-8">
-        While the present can be considered as unprecedented at its best, SSN
-        and SNUC offers a platform to showcase your talents as a surety.
-        Presenting to you our annual techfest - Invente.
-        <br />
-        <br />
-        Invente - a nexus of Innovation, Creativity and Entertainment, is a
-        2-day Intercollegiate technical fest which aims to encourage students to
-        think beyond academics and helps them discover their hidden passions and
-        talents. This technical extravaganza gives space for students to flaunt
-        their skills in various domains and caters to their adrenaline surges.
-        <br />
-        <br />
-        November 4 & 5 - Save the dates, reinvent yourself in this Realm of
-        Virtuality!
+        Looking for fun? You've come to the right place! Since 2016, Invente has
+        been our flagship techfest, catered to challenge the spirits and
+        intellect of students nationwide. With hundreds of participants across
+        eight domains, it's designed to tickle your curiosity with a plethora of
+        technical and non-technical events. The nationwide symposium assures to
+        put to the test creativity, forward thinking, and of course, having a
+        good time! And it gets better! In the first of it's kind, we'd like to
+        extend a warm welcome to try your hand at our fintech events, where you
+        can flaunt your business prowess!! With workshops galore for networking
+        & career growth, Invente 2022 is the techfest you don't wanna miss! So
+        what are you waiting for? Grab your registrations now, we look forward
+        to seeing you here soon!!
       </p>
     </div>
   );

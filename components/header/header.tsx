@@ -119,6 +119,11 @@ const Header = () => {
       </div>
       <div className="hidden w-full lg:flex items-center gap-10 justify-start font-ubuntu ">
         <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
+          <Link className="" href="/">
+            Home
+          </Link>
+        </div>
+        <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
           <Link className="" href="/coming-soon">
             Events
           </Link>

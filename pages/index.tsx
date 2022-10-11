@@ -72,9 +72,12 @@ const Home: NextPage = () => {
         <section>
           <div className="">
             <div className="flex flex-col justify-center items-center mt-40 lg:mt-20">
-              <div className="hidden md:flex items-start lg:-mt-20 w-1/2 justify-center">
+              <div className="hidden w-full  md:flex items-start lg:-mt-20 justify-evenly">
                 <img src="/vectors/ssn.svg" className="w-80 h-80 lg:scale-50" />
-                <img src="/vectors/invente.svg" className="mt-[15rem]" />
+                <img
+                  src="/vectors/invente.svg"
+                  className="mt-[20rem] mb-[10rem] scale-[2.0]"
+                />
                 <img src="/vectors/snu.svg" className="w-80 h-80 lg:scale-50" />
               </div>
               <div className="flex justify-between w-full md:hidden -mt-20 px-2">
@@ -85,12 +88,6 @@ const Home: NextPage = () => {
                 src="/vectors/invente.svg"
                 className="md:hidden px-2 scale-95"
               />
-              <div className="mt-0 text-sm mg:text-lg lg:text-2xl font-aspace text-white/80">
-                Create. Elevate. Sustain.
-              </div>
-              <div className="mt-2 mb-20 text-sm mg:text-lg lg:text-2xl font-aspace text-white/80">
-                3th <b className="font-ubuntu">&</b> 4th November
-              </div>
             </div>
             <CountDown />
             <div className="mt-40">

@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import Header from "../components/header/header";
 import { toast } from "react-hot-toast";
 import axios from "axios";
+import BlurryCircle from "../components/blurry-circle";
 
 type Props = {};
 
@@ -34,6 +35,7 @@ function SignUp({}: Props) {
   return (
     <div>
       <Header />
+      <BlurryCircle />
       <h1 className="text-3xl md:text-5xl font-azonix text-white mt-40 text-center">
         Sign Up
       </h1>
@@ -170,13 +172,13 @@ function SignUp({}: Props) {
           >
             Sign Up
           </Button>
-          <p className="mt-4 text-white font-ubuntu">
+          <p className="mt-4 text-white text-center font-ubuntu">
             Already signed up?{" "}
-            <Link
-              href="/login"
-              className=" decoration-teal-400 underline font-bold cursor-pointer"
-            >
-              Log in
+            <Link href="/login">
+              <span className="decoration-teal-400 underline font-bold cursor-pointer">
+                {" "}
+                Login
+              </span>
             </Link>
           </p>
         </form>

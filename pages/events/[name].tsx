@@ -14,6 +14,7 @@ const BLACKLIST = [
   "Sysops",
   "Kadhai Kelu",
   "Codera",
+  "Kickoff ",
 ];
 export const departments = [
   "CSE",

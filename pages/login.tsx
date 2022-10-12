@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import BlurryCircle from "../components/blurry-circle";
 import Button from "../components/button";
 import Header from "../components/header/header";
 import { useAuth } from "../lib/authContext";
@@ -22,6 +23,7 @@ function LoginPage() {
   return (
     <div>
       <Header />
+      <BlurryCircle />
       <h1 className="text-2xl md:text-5xl font-azonix text-white mt-40 text-center">
         Login
       </h1>
@@ -56,21 +58,26 @@ function LoginPage() {
             classes="mt-10 md:w-3/4"
             action={async () => {
               console.log(store.email, store.password);
-              const res = await login(store.email, store.password);
-              console.log(await res.user.getIdToken());
-              toast.success("Logged in successfully");
-              router.push("/");
+              login(store.email, store.password)
+                .then((res) => {
+                  console.log(res.user.getIdToken());
+                  toast.success("Logged in successfully");
+                  router.push("/");
+                })
+                .catch((err) => {
+                  toast.error("Invalid credentials");
+                });
             }}
           >
             Login
           </Button>
-          <p className="my-4 text-white font-ubuntu">
+          <p className="my-4 text-white text-center font-ubuntu">
             Don't have an account?{" "}
-            <Link
-              href="/signup"
-              className=" decoration-teal-400 underline font-bold cursor-pointer"
-            >
-              Sign Up
+            <Link href="/signup">
+              <span className="decoration-teal-400 underline font-bold cursor-pointer">
+                {" "}
+                Sign Up
+              </span>
             </Link>
           </p>
         </form>

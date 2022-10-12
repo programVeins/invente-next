@@ -15,16 +15,18 @@ const EventGrid: FC<Props> = ({ depts }) => {
   return (
     <div className="py-20">
       <Heading title="events" />
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-10 place-items-center my-10">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10 place-items-center my-10">
         {depts.map((dept, i) => (
           <Link key={i} href={dept.link}>
-            <div className="relative scale-95 hover:scale-110 transition-all ease-out cursor-pointer duration-300">
-              <img className="m-0 p-0 " src={dept.img} />
-              <div className="absolute text-white bottom-5 justify-center flex items-center left-0 right-0 mx-auto z-10 bg-black/30 backdrop-blur-md w-3/4 rounded-full  h-10">
-                <p className="text-xs lg:text-2xl font-aspace font-bold">
-                  {dept.name}
-                </p>
-              </div>
+            <div className="flex flex-col lg:flex-row h-80 lg:h-40 w-full hover:scale-110 hover:shadow-2xl duration-300 ease-out cursor-pointer items-center justify-start shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg">
+              <img
+                src={dept.img}
+                alt={dept.name}
+                className="w-40 h-40 rounded-t-md lg:rounded-l-xl"
+              />
+              <h2 className="text-white py-6 lg:py-0 px-4 text-left text-lg lg:text-xl font-ubuntu">
+                {dept.name}
+              </h2>
             </div>
           </Link>
         ))}

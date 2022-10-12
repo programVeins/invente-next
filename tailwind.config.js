@@ -32,7 +32,7 @@ module.exports = {
         background: "#020015",
       },
       listStyleType: {
-        awesome: '"⚡️ "',
+        awesome: '"⚪ "',
       },
       letterSpacing: {
         "wide-wide": "0.2em",

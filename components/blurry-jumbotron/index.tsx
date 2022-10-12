@@ -13,13 +13,13 @@ const BlurryJumbotron = () => {
               }}
             ></i>
           </div>
-          <Link className="" href="/coming-soon">
+          <Link className="" href="/events">
             <div className="text-lg lg:w-fit font-space flex gap-5 items-center justify-between mb-2 cursor-pointer text-cyan-500 rounded-lg px-2 py-1 bg-sky-700/30 font-bold">
               <div>Events</div>{" "}
               <i
                 dangerouslySetInnerHTML={{
                   __html: `<ion-icon
-                  class="caret-move"
+                  class="caret-move mt-2"
                   name="caret-forward-outline"
                 ></ion-icon>`,
                 }}
@@ -46,7 +46,7 @@ const BlurryJumbotron = () => {
               <i
                 dangerouslySetInnerHTML={{
                   __html: `<ion-icon
-                  class="caret-move"
+                  class="caret-move mt-2"
                   name="caret-forward-outline"
                 ></ion-icon>`,
                 }}
@@ -73,7 +73,7 @@ const BlurryJumbotron = () => {
               <i
                 dangerouslySetInnerHTML={{
                   __html: `<ion-icon
-                  class="caret-move"
+                  class="caret-move mt-2"
                   name="caret-forward-outline"
                 ></ion-icon>`,
                 }}

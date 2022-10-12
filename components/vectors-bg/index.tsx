@@ -2,7 +2,7 @@ import React from "react";
 
 export default function VectorsBG() {
   return (
-    <div className="absolute blur-[0.02rem] max-w-screen overflow-hidden lg:blur-[0.04rem]">
+    <div className="fixed blur-[0.02rem] max-w-screen overflow-hidden lg:blur-[0.04rem]">
       <div className="">
         <img
           src="/vectors/gridbg.svg"

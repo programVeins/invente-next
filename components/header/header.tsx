@@ -155,6 +155,7 @@ const Header = () => {
           </Button>
         )}
         <Button
+          sub={user ? true : false}
           action={async () => {
             if (user) {
               try {

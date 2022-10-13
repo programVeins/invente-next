@@ -143,7 +143,11 @@ const EventPage = () => {
                   }}
                 ></i>
                 <p className="font-ubuntu">
-                  {selectedEventDetails?.type ?? "TBD"}
+                  {selectedEventDetails?.size == "1"
+                    ? "Individual"
+                    : selectedEventDetails?.size.includes("1")
+                    ? "Team or Solo"
+                    : "Team"}
                 </p>
               </div>
               <div className="text-center lg:w-1/4">

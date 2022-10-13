@@ -8,6 +8,7 @@ import Header from "../components/header/header";
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import BlurryCircle from "../components/blurry-circle";
+import Footer from "../components/footer";
 
 type Props = {};
 
@@ -183,6 +184,7 @@ function SignUp({}: Props) {
           </p>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

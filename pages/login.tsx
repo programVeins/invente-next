@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import BlurryCircle from "../components/blurry-circle";
 import Button from "../components/button";
+import Footer from "../components/footer";
 import Header from "../components/header/header";
 import { useAuth } from "../lib/authContext";
 
@@ -82,6 +83,7 @@ function LoginPage() {
           </p>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

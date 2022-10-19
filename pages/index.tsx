@@ -84,11 +84,11 @@ const Home: NextPage = () => {
                   src="/vectors/invente.svg"
                   className="mt-[20rem] mb-[10rem] scale-[2.0]"
                 />
-                <img src="/vectors/snu.svg" className="w-80 h-80 lg:scale-50" />
+                <img src="/vectors/snu.svg" className="w-80 h-80 lg:scale-75" />
               </div>
               <div className="flex justify-between w-full md:hidden -mt-20 px-2">
-                <img src="/vectors/ssn.svg" className="w-28 h-28" />
-                <img src="/vectors/snu.svg" className="w-28 h-28" />
+                <img src="/vectors/ssn.svg" className="w-24 h-24" />
+                <img src="/vectors/snu.svg" className="w-24 h-24" />
               </div>
               <img
                 src="/vectors/invente.svg"

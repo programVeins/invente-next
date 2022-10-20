@@ -85,7 +85,7 @@ const EventPage = () => {
                 Department of {department?.split("-").join(" ")}{" "}
                 {department != "information-technology" &&
                 department != "snu-commerce" &&
-                department.split("-")[department.split("-").length - 1] !=
+                department?.split("-")[department?.split("-").length - 1] !=
                     "engineering"
                     ? "Engineering"
                     : ""}

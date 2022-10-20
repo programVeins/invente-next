@@ -8,7 +8,9 @@ import Loader from "../../components/loader";
 import VectorsBG from "../../components/vectors-bg";
 import { Department, Event, EventType } from "../../types";
 
-const BLACKLIST: string[] = [];
+const BLACKLIST: string[] = [
+	"Connexions"
+];
 export const departments = [
     "CSE",
     "IT",

@@ -35,7 +35,7 @@ const Passes = () => {
           <h1 className="text-2xl md:text-5xl font-azonix text-white mt-40 text-center">
             Passes
           </h1>
-          <div className="grid gap-20 mt-20 mb-40 grid-cols-2 w-3/4 mx-auto text-white">
+          <div className="grid gap-20 mt-20 mb-20 grid-cols-2 w-3/4 mx-auto text-white">
             {passes.map((pass, i) => (
               <div
                 key={i}
@@ -48,7 +48,11 @@ const Passes = () => {
               </div>
             ))}
           </div>
-          <div className="mx-auto w-full">
+          <p className="font-ubuntu text-2xl text-white text-center mb-4">
+            {" "}
+            Please upload your receipts in this link!
+          </p>
+          <div className="flex w-full justify-center mb-20">
             <Button>Upload</Button>
           </div>
         </section>

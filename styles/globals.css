@@ -97,3 +97,58 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
+.flurry-bg {
+  transition: all ease 300ms;
+}
+
+.flurry-bg:hover {
+  transition: all ease 300ms;
+  background: linear-gradient(
+    -45deg,
+    #8152ee4a,
+    #3c47e74a,
+    #2382d54a,
+    #23d2d54a
+  );
+  box-shadow: -20px 20px 50px -10px rgba(33, 70, 206, 0.47);
+  filter: brightness(100%);
+  background-size: 400% 400%;
+  animation: gradientBG 10s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+  animation: movingShadows 5s ease-in-out infinite;
+}
+
+:root {
+  --text-shadow-col: rgba(18, 81, 132, 0.541);
+}
+
+@keyframes movingShadows {
+  0% {
+    box-shadow: -20px 20px 50px 0px var(--text-shadow-col);
+  }
+  25% {
+    box-shadow: 20px 20px 50px 0px var(--text-shadow-col);
+  }
+  50% {
+    box-shadow: 20px -20px 50px 0px var(--text-shadow-col);
+  }
+  75% {
+    box-shadow: -20px -20px 50px 0px var(--text-shadow-col);
+  }
+  100% {
+    box-shadow: -20px 20px 50px 0px var(--text-shadow-col);
+  }
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

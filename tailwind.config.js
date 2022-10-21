@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
@@ -28,6 +29,11 @@ module.exports = {
         spantaran: ["Spantaran", ...defaultTheme.fontFamily.sans],
         ubuntu: ["Ubuntu", ...defaultTheme.fontFamily.sans],
       },
+      textShadow: {
+        sm: "0 1px 2px var(--tw-shadow-color)",
+        DEFAULT: "0 2px 4px var(--tw-shadow-color)",
+        lg: "0 8px 16px var(--tw-shadow-color)",
+      },
       colors: {
         background: "#020015",
       },
@@ -39,5 +45,16 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };

@@ -6,12 +6,14 @@ import BlurryCircle from "../components/blurry-circle";
 import Button from "../components/button";
 import Footer from "../components/footer";
 import Header from "../components/header/header";
+import Loader from "../components/loader";
 import { useAuth } from "../lib/authContext";
 
 function LoginPage() {
   const [store, setStore] = useState({
     email: "",
     password: "",
+    loading: false,
   });
 
   const { login, user } = useAuth();
@@ -56,9 +58,11 @@ function LoginPage() {
           />
           <Button
             sub
+            disabled={store.loading}
             classes="mt-10 md:w-3/4"
             action={async () => {
               console.log(store.email, store.password);
+              setStore({ ...store, loading: true });
               login(store.email, store.password)
                 .then((res) => {
                   console.log(res.user.getIdToken());
@@ -67,10 +71,17 @@ function LoginPage() {
                 })
                 .catch((err) => {
                   toast.error("Invalid credentials");
+                  setStore({ ...store, loading: false });
                 });
             }}
           >
-            Login
+            {store.loading ? (
+              <div className="flex justify-center">
+                <Loader />
+              </div>
+            ) : (
+              "Login"
+            )}
           </Button>
           <p className="my-4 text-white text-center font-ubuntu">
             Don't have an account?{" "}

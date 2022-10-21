@@ -9,6 +9,7 @@ import { toast } from "react-hot-toast";
 import axios from "axios";
 import BlurryCircle from "../components/blurry-circle";
 import Footer from "../components/footer";
+import Loader from "../components/loader";
 
 type Props = {};
 
@@ -21,7 +22,7 @@ function SignUp({}: Props) {
     department: "",
     password: "",
     isSuccess: false,
-    loading: true,
+    loading: false,
     errorMessage: "",
     year: 0,
   });
@@ -135,9 +136,11 @@ function SignUp({}: Props) {
           />
           <Button
             sub
+            disabled={store.loading}
             classes="mt-10 md:w-3/4"
             action={async () => {
               console.log(store.email, store.password);
+              setStore({ ...store, loading: true });
               try {
                 const creds = await signup(store.email, store.password);
                 store.isSuccess = true;
@@ -158,6 +161,7 @@ function SignUp({}: Props) {
                 } catch (error) {
                   console.log(error);
                   toast.error("Unknown Error Occured. Reach out to Support");
+                  setStore({ ...store, loading: false });
                 }
               } catch (error) {
                 console.log(
@@ -168,10 +172,17 @@ function SignUp({}: Props) {
                   .split("(")[0];
                 store.isSuccess = false;
                 toast.error(store.errorMessage);
+                setStore({ ...store, loading: false });
               }
             }}
           >
-            Sign Up
+            {store.loading ? (
+              <div className="flex justify-center">
+                <Loader />
+              </div>
+            ) : (
+              "Sign Up"
+            )}
           </Button>
           <p className="mt-4 text-white text-center font-ubuntu">
             Already signed up?{" "}

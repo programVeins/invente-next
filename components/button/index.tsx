@@ -4,14 +4,16 @@ interface Props {
   action?: () => void;
   sub?: boolean;
   classes?: string;
+  disabled?: boolean;
   children: JSX.Element | string;
 }
 
-const Button: FC<Props> = ({ action, sub, classes, children }) => {
+const Button: FC<Props> = ({ action, sub, classes, disabled, children }) => {
   return (
     <button
       type="button"
       onClick={action}
+      disabled={disabled}
       className={
         `transition-all hover:animate-none` +
         (sub

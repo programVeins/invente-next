@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BlurryCircle from "../components/blurry-circle";
+import Button from "../components/button";
 import Footer from "../components/footer";
 import Header from "../components/header/header";
 import VectorsBG from "../components/vectors-bg";
@@ -34,18 +35,21 @@ const Passes = () => {
           <h1 className="text-2xl md:text-5xl font-azonix text-white mt-40 text-center">
             Passes
           </h1>
-          <div className="grid gap-10 mt-20 mb-40 grid-cols-4 w-3/4 mx-auto text-white">
+          <div className="grid gap-20 mt-20 mb-40 grid-cols-2 w-3/4 mx-auto text-white">
             {passes.map((pass, i) => (
               <div
                 key={i}
-                className="w-full flex flex-col h-full justify-between flurry-bg text-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg"
+                className="w-full flex flex-col h-full py-10 px-20 justify-between flurry-bg text-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg"
               >
-                <p className="font-aspace text-xl py-10">{pass.name}</p>
-                <p className="font-aspace text-5xl py-10 font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-blue-600 shadow-blue-500">
+                <p className="font-aspace text-xl py-2">{pass.name}</p>
+                <p className="font-aspace text-5xl py-2 font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-blue-600 shadow-blue-500">
                   ₹{pass.amount}
                 </p>
               </div>
             ))}
+          </div>
+          <div className="mx-auto w-full">
+            <Button>Upload</Button>
           </div>
         </section>
       </main>

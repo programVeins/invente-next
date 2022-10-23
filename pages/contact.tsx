@@ -2,6 +2,7 @@ import React from "react";
 import BlurryCircle from "../components/blurry-circle";
 import Footer from "../components/footer";
 import Header from "../components/header/header";
+import Heading from "../components/heading";
 import VectorsBG from "../components/vectors-bg";
 
 const Contact = () => {
@@ -17,7 +18,8 @@ const Contact = () => {
             Contact
           </h1>
           <div className="font-ubuntu lg:text-2xl text-white w-2/3 mx-auto">
-            <p className="my-10">Hostel Accommodation (INVENTE'22)</p>
+            <p className="my-10"></p>
+            <Heading title="Hostel Accommodation (INVENTE'22)" />
             <ul>
               <li className="my-6">
                 1. Participants are required to provide a *Bona-fide* given by

@@ -83,7 +83,7 @@ const Home: NextPage = () => {
 
                 <div className="flex flex-col">
                   <img
-                    className="mt-[15rem] mb-[1rem] h-20 z-10"
+                    className="mt-[12rem] mb-[1rem] h-14 mx-auto w-[200px] z-10"
                     src="/images/sponsors/tmb.png"
                   />
                   <p className=" text-center  text-white font-ubuntu text-2xl">
@@ -91,13 +91,13 @@ const Home: NextPage = () => {
                   </p>
                   <img
                     src="/vectors/invente.svg"
-                    className="mt-[2rem] mb-[5rem] scale-[2.0]"
+                    className="mt-[2rem] mb-[5rem] scale-[1.7]"
                   />
                   <p className="text-center text-white font-ubuntu text-2xl">
                     Powered by
                   </p>
                   <img
-                    className="mt-5 mb-10 h-14 z-10"
+                    className="mt-5 mb-10 h-10 mx-auto w-[250px] z-10"
                     src="/images/sponsors/sattva.png"
                   />
                 </div>

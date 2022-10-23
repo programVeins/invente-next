@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import BlurryCircle from "../components/blurry-circle";
 import Button from "../components/button";
@@ -10,18 +11,22 @@ const Passes = () => {
     {
       name: "Event Pass",
       amount: 300,
+      link: "events",
     },
     {
       name: "Workshop Pass",
       amount: 250,
+      link: "workshop",
     },
     {
       name: "Bulk Pass (per head)",
       amount: 275,
+      link: "bulk",
     },
     {
       name: "Hackathon Pass",
       amount: 300,
+      link: "events",
     },
   ]);
   return (
@@ -37,7 +42,7 @@ const Passes = () => {
           </h1>
           <div className="grid gap-20 mt-20 mb-20 grid-cols-1 lg:grid-cols-2 w-3/4 mx-auto text-white">
             {passes.map((pass, i) => (
-              <a href="https://axisbpayments.razorpay.com/ssn-snuc-Invente">
+              <Link href={`/passes-info/${pass.link}`}>
                 <div
                   key={i}
                   className="w-full cursor-pointer flex flex-col h-full py-10 px-20 justify-between flurry-bg text-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg"
@@ -47,15 +52,8 @@ const Passes = () => {
                     ₹{pass.amount}
                   </p>
                 </div>
-              </a>
+              </Link>
             ))}
-          </div>
-          <p className="font-ubuntu px-10 lg:px-0 text-2xl text-white text-center mb-4">
-            {" "}
-            Please upload your receipts in this link!
-          </p>
-          <div className="flex w-full justify-center mb-20">
-            <Button disabled>Upload</Button>
           </div>
         </section>
       </main>

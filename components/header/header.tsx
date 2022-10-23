@@ -40,7 +40,7 @@ const Header = () => {
   }, [showingMenu]);
 
   return (
-    <header className="flex fixed top-0 bg-black/30 backdrop-blur-lg z-10 menu-nav text-white w-full justify-between py-4 px-4 xl:px-10 lg:py-6 items-center">
+    <header className="flex fixed top-0 bg-black/30 backdrop-blur-lg z-20 menu-nav text-white w-full justify-between py-4 px-4 xl:px-10 lg:py-6 items-center">
       <div className="w-full lg:hidden flex justify-between lg:justify-start items-center">
         {showingMenu && (
           <div className="absolute duration-300 transition-all flex flex-col z-30 w-full left-0 top-0 h-screen items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-gray-900 rounded-md lg:rounded-xl">

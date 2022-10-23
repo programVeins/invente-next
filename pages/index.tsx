@@ -78,28 +78,45 @@ const Home: NextPage = () => {
         <section>
           <div className="">
             <div className="flex flex-col justify-center items-center mt-40 lg:mt-20">
-              <div className="hidden w-full  md:flex items-start lg:-mt-20 justify-evenly">
+              <div className="hidden w-full md:flex items-start lg:-mt-20 justify-evenly">
                 <img src="/vectors/ssn.svg" className="w-80 h-80 lg:scale-50" />
 
-                <img
-                  src="/vectors/invente.svg"
-                  className="mt-[20rem] mb-[10rem] scale-[2.0]"
-                />
+                <div className="flex flex-col">
+                  <img
+                    className="mt-[15rem] mb-[1rem] h-20 z-10"
+                    src="/images/sponsors/tmb.png"
+                  />
+                  <p className=" text-center  text-white font-ubuntu text-2xl">
+                    presents
+                  </p>
+                  <img
+                    src="/vectors/invente.svg"
+                    className="mt-[2rem] mb-[5rem] scale-[2.0]"
+                  />
+                  <p className="text-center text-white font-ubuntu text-2xl">
+                    Powered by
+                  </p>
+                  <img
+                    className="mt-5 mb-10 h-14 z-10"
+                    src="/images/sponsors/sattva.png"
+                  />
+                </div>
 
                 <img src="/vectors/snu.svg" className="w-80 h-80 lg:scale-75" />
               </div>
-              <div className="h-40 flex gap-10 opacity-100">
-                <img className="h-20" src="/images/sponsors/tmb.png" />
-                <img className="h-14" src="/images/sponsors/sattva.png" />
-              </div>
+
               <div className="flex justify-between w-full md:hidden -mt-20 px-2">
                 <img src="/vectors/ssn.svg" className="w-24 h-24" />
                 <img src="/vectors/snu.svg" className="w-24 h-24" />
               </div>
               <img
                 src="/vectors/invente.svg"
-                className="md:hidden px-2 scale-95"
+                className="md:hidden px-2 scale-95 my-10"
               />
+              <div className="flex flex-col w-1/2 z-10 mb-10 mx-auto lg:hidden gap-10 opacity-100">
+                <img className="" src="/images/sponsors/tmb.png" />
+                <img className="" src="/images/sponsors/sattva.png" />
+              </div>
             </div>
             <CountDown />
             <div className="mt-40">

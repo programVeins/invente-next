@@ -52,7 +52,7 @@ export const depts = [
     link: "/events/chemical",
   },
   {
-    name: "SNU Commerce",
+    name: "SNUC Commerce",
     img: "/images/com.jpeg",
     link: "/coming-soon",
   },

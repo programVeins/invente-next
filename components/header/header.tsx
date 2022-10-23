@@ -52,39 +52,45 @@ const Header = () => {
             </div>
             <div
               onClick={() => setShowingMenu(false)}
-              className="font-ubuntu text-center my-6 text-xl"
+              className="font-ubuntu text-center my-4 text-xl"
             >
               <Link href="/events">Events</Link>
             </div>
             <div
               onClick={() => setShowingMenu(false)}
-              className="font-ubuntu text-center my-6 text-xl"
+              className="font-ubuntu text-center my-4 text-xl"
             >
               <Link href="/coming-soon">Workshops</Link>
             </div>
             <div
               onClick={() => setShowingMenu(false)}
-              className="font-ubuntu text-center my-6 text-xl"
+              className="font-ubuntu text-center my-4 text-xl"
             >
               <Link href="/coming-soon">Hackathon</Link>
             </div>
             <div
               onClick={() => setShowingMenu(false)}
-              className="font-ubuntu text-center my-6 text-xl"
+              className="font-ubuntu text-center my-4 text-xl"
             >
               <Link href="/coming-soon">Schedule</Link>
             </div>
             <div
               onClick={() => setShowingMenu(false)}
-              className="font-ubuntu text-center my-6 text-xl"
+              className="font-ubuntu text-center my-4 text-xl"
             >
               <Link href="/coming-soon">Sponsors</Link>
             </div>
             <div
               onClick={() => setShowingMenu(false)}
-              className="font-ubuntu text-center my-6 text-xl"
+              className="font-ubuntu text-center my-4 text-xl"
             >
               <Link href="/passes">Passes</Link>
+            </div>
+            <div
+              onClick={() => setShowingMenu(false)}
+              className="font-ubuntu text-center my-4 text-xl"
+            >
+              <Link href="/contact">Contact</Link>
             </div>
           </div>
         )}
@@ -142,6 +148,9 @@ const Header = () => {
         </div>
         <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
           <Link href="/passes">Passes</Link>
+        </div>
+        <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
+          <Link href="/contact">Contact</Link>
         </div>
       </div>
       <div className="hidden lg:flex gap-10 w-2/3 justify-end">

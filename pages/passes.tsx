@@ -26,7 +26,7 @@ const Passes = () => {
     {
       name: "Hackathon Pass",
       amount: 300,
-      link: "events",
+      link: "hack",
     },
   ]);
   return (

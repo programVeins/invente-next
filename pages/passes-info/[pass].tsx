@@ -14,6 +14,8 @@ const getPassLink = (pass: string) => {
       return "https://docs.google.com/forms/d/e/1FAIpQLSc0QQYohqNQJU5Ld9VGWmXB9Qwbp61nRSHeCC5pAkSBnxWlrA/viewform?usp=sf_link";
     case "bulk":
       return "https://docs.google.com/forms/d/e/1FAIpQLScTlFEMi--UnT1xsbDI4hbm9SKEPzPjvE1ILPxAesw2h707Dw/viewform?usp=sf_link";
+    case "hack":
+      return "https://forms.gle/8xQE5ZrDk9GpGgkQ6";
   }
 };
 
@@ -27,6 +29,9 @@ const getThirdPoint = (pass: string) => {
     case "bulk":
       return `3. Under the given options, choose Bulk Registration (enter the
             number of passes required - 20+).`;
+    case "hack":
+      return `3. Under the given options, choose
+            Registration (enter the number of passes required).`;
   }
 };
 const PassesInfoPage = () => {

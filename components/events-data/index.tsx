@@ -6,8 +6,10 @@ import Button from "../button";
 import { Prisma } from "@prisma/client";
 import { useAuth } from "../../lib/authContext";
 import { toast } from "react-hot-toast";
+import { useRouter } from "next/router";
 
 const EventsData = () => {
+  const router = useRouter();
   const [data, setData] = useState<Event>({
     id: 0,
     event_name: "",
@@ -21,7 +23,7 @@ const EventsData = () => {
   });
   const [sections, setSections] = useState<Section[]>([]);
 
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
 
   useEffect(() => {
     const async = async () => {
@@ -49,6 +51,7 @@ const EventsData = () => {
       .then(() => {})
       .catch((err) => {
         console.log(err);
+        logout().then(() => router.push("/login"));
       });
   }, []);
 

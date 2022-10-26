@@ -104,24 +104,7 @@ const Header = () => {
           ></ion-icon>`,
           }}
         ></i>
-        <Button
-          action={async () => {
-            if (user) {
-              try {
-                await logout();
-                setSecret(false);
-                router.push("/");
-                toast.success("Logged out successfully");
-              } catch (error) {
-                toast.error("Error logging out");
-              }
-            } else {
-              nav.push("/signup");
-            }
-          }}
-        >
-          {user ? "Logout" : "Register"}
-        </Button>
+        <Button action={() => router.push("/passes")}>Get Passes</Button>
       </div>
       <div className="hidden w-full lg:flex items-center gap-10 justify-start font-ubuntu ">
         <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
@@ -163,25 +146,7 @@ const Header = () => {
             Events Form
           </Button>
         )}
-        <Button
-          sub={user ? true : false}
-          action={async () => {
-            if (user) {
-              try {
-                await logout();
-                setSecret(false);
-                router.push("/");
-                toast.success("Logged out successfully");
-              } catch (error) {
-                toast.error("Error logging out");
-              }
-            } else {
-              nav.push("/signup");
-            }
-          }}
-        >
-          {user ? "Logout" : "Register"}
-        </Button>
+        <Button action={() => router.push("/passes")}>Get Passes</Button>
       </div>
     </header>
   );

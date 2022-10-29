@@ -43,7 +43,7 @@ const getDesc = (pass: string) => {
     case "workshop":
       return `Workshop Pass is valid for single person and can only attend one workshop.`;
     case "hack":
-      `Hackathon Pass  only valid for single person. Each member of the team should buy pass separately.`;
+      return `Hackathon Pass  only valid for single person. Each member of the team should buy pass separately.`;
   }
 };
 const PassesInfoPage = () => {

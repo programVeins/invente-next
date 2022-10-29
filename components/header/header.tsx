@@ -78,7 +78,7 @@ const Header = () => {
               onClick={() => setShowingMenu(false)}
               className="font-ubuntu text-center my-4 text-xl"
             >
-              <Link href="/coming-soon">Sponsors</Link>
+              <Link href="/sponsors">Sponsors</Link>
             </div>
             <div
               onClick={() => setShowingMenu(false)}
@@ -127,7 +127,7 @@ const Header = () => {
           <Link href="/coming-soon">Schedule</Link>
         </div>
         <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
-          <Link href="/coming-soon">Sponsors</Link>
+          <Link href="/sponsors">Sponsors</Link>
         </div>
         <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
           <Link href="/passes">Passes</Link>

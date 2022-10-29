@@ -54,7 +54,7 @@ export const depts = [
   {
     name: "SNUC Commerce",
     img: "/images/com.jpeg",
-    link: "/coming-soon",
+    link: "/events/snuc",
   },
 ];
 

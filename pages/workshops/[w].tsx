@@ -1,15 +1,19 @@
 import axios from "axios";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import BlurryCircle from "../components/blurry-circle";
-import Footer from "../components/footer";
-import Header from "../components/header/header";
-import Loader from "../components/loader";
-import VectorsBG from "../components/vectors-bg";
-import { Department, Event, EventType } from "../types";
+import BlurryCircle from "../../components/blurry-circle";
+import Footer from "../../components/footer";
+import Header from "../../components/header/header";
+import Loader from "../../components/loader";
+import VectorsBG from "../../components/vectors-bg";
+import { getWorkshopDetails } from "../../lib/workshops";
+import { Department, Event, EventType } from "../../types";
 
 type Props = {};
 
 const HackathonPage = (props: Props) => {
+  const router = useRouter();
+  const { w } = router.query;
   const [selectedEventDetails, setSelectedEventDetails] = useState<Event>({
     id: "",
     event_name: "",
@@ -25,15 +29,20 @@ const HackathonPage = (props: Props) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-    const async = async () => {
-      const res = await axios.get("/api/events/hack");
-      setSelectedEventDetails(res.data.events);
-      setLoading(false);
-      console.log(res.data.events);
-    };
-
-    async().then(() => {});
+    setLoading(false);
+    setSelectedEventDetails(
+      getWorkshopDetails(w as string) ?? {
+        id: "",
+        event_name: "",
+        description: "",
+        type: EventType.Team,
+        size: "",
+        department: Department.ECE,
+        venue: "",
+        time: "",
+        sections: {},
+      }
+    );
   }, []);
 
   return (
@@ -56,39 +65,7 @@ const HackathonPage = (props: Props) => {
               {selectedEventDetails?.description}
             </p>
             <div className="grid grid-cols-2 gap-y-10 lg:gap-y-0 place-items-center lg:flex lg:gap-10 justify-between items-center my-10">
-              <div className="text-center lg:w-1/4">
-                <p className="font-ubuntu mb-2">Team Type</p>
-                <i
-                  dangerouslySetInnerHTML={{
-                    __html: `<ion-icon
-                  name="person-circle-outline"
-                  size="large"
-                ></ion-icon>`,
-                  }}
-                ></i>
-                <p className="font-ubuntu">
-                  {selectedEventDetails?.size == "1"
-                    ? "Individual"
-                    : selectedEventDetails?.size.includes("1")
-                    ? "Team or Solo"
-                    : "Team"}
-                </p>
-              </div>
-              <div className="text-center lg:w-1/4">
-                <p className="font-ubuntu mb-2">Team Size</p>
-                <i
-                  dangerouslySetInnerHTML={{
-                    __html: `<ion-icon
-                  name="people-circle-outline"
-                  size="large"
-                ></ion-icon>`,
-                  }}
-                ></i>
-                <p className="font-ubuntu">
-                  {selectedEventDetails?.size ?? "TBD"}
-                </p>
-              </div>
-              <div className="text-center lg:w-1/4">
+              <div className="text-center lg:w-1/2">
                 <p className="font-ubuntu mb-2">Venue</p>
                 <i
                   dangerouslySetInnerHTML={{
@@ -100,7 +77,7 @@ const HackathonPage = (props: Props) => {
                 ></i>
                 <p className="font-ubuntu">{selectedEventDetails?.venue}</p>
               </div>
-              <div className="text-center lg:w-1/4">
+              <div className="text-center lg:w-1/2">
                 <p className="font-ubuntu mb-2">Time</p>
                 <i
                   dangerouslySetInnerHTML={{

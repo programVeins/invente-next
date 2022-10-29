@@ -62,6 +62,14 @@ const EventPage = () => {
             }
           }
         }
+
+        if (validEvents.filter((ev) => ev.event_name === "Websitica") != null) {
+          const w = validEvents.find((ev) => ev.event_name === "Websitica");
+          const p = validEvents.find((ev) => ev.event_name === "Papyrus");
+          validEvents[0] = w;
+          validEvents[validEvents.length] = p;
+          // Na pannuven, vandhu sappu
+        }
         setEvents(validEvents);
         setSelectedEvent(0);
         setLoading(false);

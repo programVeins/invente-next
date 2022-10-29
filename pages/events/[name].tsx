@@ -65,9 +65,8 @@ const EventPage = () => {
 
         if (validEvents.filter((ev) => ev.event_name === "Websitica") != null) {
           const w = validEvents.find((ev) => ev.event_name === "Websitica");
-          const p = validEvents.find((ev) => ev.event_name === "Papyrus");
-          validEvents[0] = w;
-          validEvents[validEvents.length] = p;
+          validEvents.splice(validEvents.indexOf(w), 1);
+          validEvents.unshift(w);
           // Na pannuven, vandhu sappu
         }
         setEvents(validEvents);

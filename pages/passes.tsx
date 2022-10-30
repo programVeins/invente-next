@@ -55,6 +55,14 @@ const Passes = () => {
               </Link>
             ))}
           </div>
+          <p className="text-white text-lg my-10 font-ubuntu my-20 text-center mx-auto">
+            For any query regarding registration/paymet, contact:
+            <br />
+            Sowmick Rakesh S - 9500822248
+            <br />
+            Manish KS 86101 00305
+            <br />
+          </p>
         </section>
       </main>
       <Footer />

@@ -63,11 +63,15 @@ const EventPage = () => {
           }
         }
 
-        if (validEvents.filter((ev) => ev.event_name === "Websitica") != null) {
-          const w = validEvents.find((ev) => ev.event_name === "Websitica");
-          validEvents.splice(validEvents.indexOf(w), 1);
-          validEvents.unshift(w);
-          // Na pannuven, vandhu sappu
+        if (department == "information-technology") {
+          if (
+            validEvents.filter((ev) => ev.event_name === "Websitica") != null
+          ) {
+            const w = validEvents.find((ev) => ev.event_name === "Websitica");
+            validEvents.splice(validEvents.indexOf(w), 1);
+            validEvents.unshift(w);
+            // Na pannuven, vandhu sappu
+          }
         }
         setEvents(validEvents);
         setSelectedEvent(0);

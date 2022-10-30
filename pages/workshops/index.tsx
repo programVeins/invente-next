@@ -13,12 +13,12 @@ const workshops = [
     link: "/workshops/ai-ml",
   },
   {
-    name: "Coming Soon",
-    link: "/coming-soon",
+    name: "Optics Workshop",
+    link: "/workshops/optics",
   },
   {
-    name: "Coming Soon",
-    link: "/coming-soon",
+    name: "Fintech Workshop",
+    link: "/workshops/fintech",
   },
 ];
 
@@ -35,7 +35,7 @@ const WorkshopPage = (props: Props) => {
         Check out various workshops that we have to offer this Invente! Choose a
         workshop to see more details
       </p>
-      <div className="grid mt-20 mb-40 grid-cols-1 lg:grid-cols-3 gap-10 w-3/4 mx-auto">
+      <div className="grid mt-40 mb-40 lg:mb-80 grid-cols-1 lg:grid-cols-3 gap-10 w-3/4 mx-auto">
         {workshops.map((dept, i) => (
           <Link href={dept.link}>
             <div className="flex-col p-10 hover:scale-110 hover:shadow-2xl duration-300 ease-out cursor-pointer items-center justify-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg">

@@ -17,7 +17,7 @@ export const getWorkshopDetails = (name: string) => {
         size: "",
         department: Department.IT,
         venue: "Main Auditorium",
-        time: "10 to 12",
+        time: "Nov 4: 10am to 12pm",
         sections: {
           values: [
             {

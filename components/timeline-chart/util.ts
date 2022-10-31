@@ -1,20 +1,7 @@
 import { ApexOptions } from "apexcharts";
-import data from './data.json';
+import { axisStyle, dataLabelStyle, lgOptions, mdOptions, smOptions, xlOptions } from "./breakpoints";
 
-const fontFamily = 'Azonix';
-
-const axisStyle = {
-    colors: ['#ffffff'],
-    fontSize: '14px',
-    fontWeight: 400,
-    fontFamily,
-}
-const dataLabelStyle = {
-    fontWeight: 500,
-    fontSize: '14px',
-    fontFamily,
-}
-const gridBorderColor = '#504F89';
+const gridBorderColor = '#ccc';
 const gradientStyle = {
     type: 'horizontal',
     colorStops: [
@@ -69,12 +56,14 @@ export const options: ApexOptions = {
     },
     chart: {
         type: 'rangeBar',
+        height: '450px',
+        offsetX: 60,
         toolbar: {
             show: false,
         },
         zoom: {
             enabled: false,
-        }
+        },
     },
     plotOptions: {
         bar: {
@@ -98,7 +87,7 @@ export const options: ApexOptions = {
         labels: {
             style: {
                 ...axisStyle,
-                fontSize: '28px',
+                fontSize: '32px',
             }
         },
     },
@@ -114,6 +103,12 @@ export const options: ApexOptions = {
         onDatasetHover: {
             highlightDataSeries: true,
         },
+        fixed: {
+            enabled: true,
+            position: 'topLeft',
+        },
+        followCursor: true,
+        intersect: true,
         x: {
             show: true,
         },
@@ -142,9 +137,27 @@ export const options: ApexOptions = {
             }
         },
     },
+    responsive: [
+        {
+            breakpoint: 1280,
+            options: xlOptions
+        },
+        {
+            breakpoint: 1024,
+            options: lgOptions
+        },
+        {
+            breakpoint: 768,
+            options: mdOptions,
+        },
+        {
+            breakpoint: 640,
+            options: smOptions
+        },
+    ]
 };
 
-const dateGetter = (hr: number, min: number) =>
+const dateFormatter = (hr: number, min: number) =>
     min > 29 ?
     new Date(2022, 10, 3, hr+6, min+30-60).getTime() :
     new Date(2022, 10, 3, hr+5, min+30).getTime();
@@ -156,22 +169,22 @@ export const series: ApexOptions['series'] = [
             {
                 x: 'Day 1',
                 y: [
-                    dateGetter(9,0),
-                    dateGetter(10,0),
+                    dateFormatter(9,0),
+                    dateFormatter(10,0),
                 ],
             },
             {
                 x: 'Day 1',
                 y: [
-                    dateGetter(11,0),
-                    dateGetter(12, 30),
+                    dateFormatter(11,0),
+                    dateFormatter(12, 30),
                 ],
             },
             {
                 x: 'Day 2',
                 y: [
-                    dateGetter(9,0),
-                    dateGetter(11,30),
+                    dateFormatter(9,0),
+                    dateFormatter(11,30),
                 ],
             },
         ]
@@ -182,22 +195,22 @@ export const series: ApexOptions['series'] = [
             {
                 x: 'Day 1',
                 y: [
-                    dateGetter(9,30),
-                    dateGetter(11,0),
+                    dateFormatter(9,30),
+                    dateFormatter(11,0),
                 ],
             },
             {
                 x: 'Day 2',
                 y: [
-                    dateGetter(9,30),
-                    dateGetter(11,0),
+                    dateFormatter(9,30),
+                    dateFormatter(11,0),
                 ],
             },
             {
                 x: 'Day 2',
                 y: [
-                    dateGetter(12,0),
-                    dateGetter(13,0),
+                    dateFormatter(12,0),
+                    dateFormatter(13,0),
                 ],
             },
         ]
@@ -208,23 +221,23 @@ export const series: ApexOptions['series'] = [
             {
                 x: 'Day 1',
                 y: [
-                    dateGetter(9,30),
-                    dateGetter(11,0),
+                    dateFormatter(9,30),
+                    dateFormatter(11,0),
                 ],
             },
             {
 
                 x: 'Day 2',
                 y: [
-                    dateGetter(9,30),
-                    dateGetter(11,0),
+                    dateFormatter(9,30),
+                    dateFormatter(11,0),
                 ],
             },
             {
                 x: 'Day 2',
                 y: [
-                    dateGetter(11,30),
-                    dateGetter(12,30)
+                    dateFormatter(11,30),
+                    dateFormatter(12,30)
                 ],
             }
         ]

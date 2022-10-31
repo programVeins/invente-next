@@ -19,20 +19,26 @@ const SponsorsPage = () => {
             Sponsors
           </h1>
           <div className="font-ubuntu z-10 lg:text-2xl text-white w-2/3 mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-20 place-content-center place-items-center gap-20">
-              <img src="/images/sponsors/tmb.png" />
-              <img src="/images/sponsors/sattva.png" />
-              <img src="/images/sponsors/celcom.png" />
-
-              <img src="/images/sponsors/sac.png" />
-              <img src="/images/sponsors/do.png" />
-              <img src="/images/sponsors/ieee.png" />
-              <img src="/images/sponsors/in2.png" />
-              <img src="/images/sponsors/nat.png" />
-              <img src="/images/sponsors/cgvak.png" />
+            <div className="flex flex-col w-1/2 mx-auto text-center gap-10 mt-20">
+              <p>Title Sponsor</p>
+              <img className="h-20 lg:h-40" src="/images/sponsors/tmb.png" />
+              <p>Co Sponsor</p>
+              <img className="h-10 lg:h-20" src="/images/sponsors/sattva.png" />
             </div>
-            <div className="flex justify-center mb-40">
-              <img src="/images/sponsors/ts.svg" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-20 place-content-center place-items-center gap-40">
+              <img className="z-10 w-full" src="/images/sponsors/celcom.png" />
+              <img className="z-10 w-full" src="/images/sponsors/sac.png" />
+              <img className="z-10 w-full" src="/images/sponsors/do.png" />
+              <img className="z-10 w-full" src="/images/sponsors/ieee.png" />
+              <img className="z-10 w-full" src="/images/sponsors/in2.png" />
+              <img className="z-10 w-full" src="/images/sponsors/nat.png" />
+              <img className="z-10 w-full" src="/images/sponsors/cgvak.png" />
+              <img className="z-10 w-full" src="/images/sponsors/ts.svg" />
+              <img className="z-10 w-full" src="/images/sponsors/toyota.png" />
+              <img className="z-10 w-full" src="/images/sponsors/suba.png" />
+              <img className="z-10 w-full" src="/images/sponsors/treat.png" />
+              <img className="z-10 w-full" src="/images/sponsors/kalai.jpg" />
+              <img className="z-10 w-full" src="/images/sponsors/rah.png" />
             </div>
           </div>
         </section>

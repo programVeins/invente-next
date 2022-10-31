@@ -56,7 +56,7 @@ const Passes = () => {
             ))}
           </div>
           <p className="text-white text-lg my-10 font-ubuntu my-20 text-center mx-auto">
-            For any query regarding registration/paymet, contact:
+            For any query regarding registration/payment, contact:
             <br />
             Sowmick Rakesh S - 9500822248
             <br />

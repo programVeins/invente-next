@@ -27,11 +27,23 @@ const getThirdPoint = (pass: string) => {
     case "workshop":
       return `3. Under the given options, choose Workshop.`;
     case "bulk":
-      return `3. Under the given options, choose Bulk Registration (enter the
-            number of passes required - 20+).`;
+      return `3. Under the given options, choose Bulk Registration (Bulk registration is open to groups of 20+ Members from the same college. The details of all members must be uploaded to the provided Google Form. Bulk registration includes only Event Passes, Workshop passes are separate.)`;
     case "hack":
       return `3. Under the given options, choose
             Registration (enter the number of passes required).`;
+  }
+};
+
+const getDesc = (pass: string) => {
+  switch (pass) {
+    case "bulk":
+      return `Bulk registration is open to groups of 20+ Members from the same college. The details of all members must be uploaded to the provided Google Form. Bulk registration includes only Event Passes, Workshop passes are separate.`;
+    case "events":
+      return `An Event Pass is applicable for single person and can apply for atmost 4 Techniacal Events.`;
+    case "workshop":
+      return `Workshop Pass is valid for single person and can only attend one workshop.`;
+    case "hack":
+      return `Hackathon Pass  only valid for single person. Each member of the team should buy pass separately.`;
   }
 };
 const PassesInfoPage = () => {
@@ -46,7 +58,10 @@ const PassesInfoPage = () => {
         <BlurryCircle />
 
         <section className="text-white">
-          <h1 className="text-2xl md:text-5xl font-azonix text-white mt-40 text-center">
+          <p className="font-ubuntu lg:text-xl mt-40 lg:w-1/2 mx-auto text-center">
+            {getDesc(pass as string)}
+          </p>
+          <h1 className="text-2xl md:text-5xl font-azonix text-white mt-10 text-center">
             Instructions for Registration
           </h1>
           <ul className="font-ubuntu lg:text-xl w-2/3 mx-auto my-10">

@@ -45,7 +45,7 @@ const Passes = () => {
               <Link href={`/passes-info/${pass.link}`}>
                 <div
                   key={i}
-                  className="w-full cursor-pointer flex flex-col h-full py-10 px-20 justify-between flurry-bg text-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg"
+                  className="w-full cursor-pointer flex flex-col h-full py-10 lg:px-20 justify-between flurry-bg text-center shadow-xl border-[0.02rem] border-gray-400 border-opacity-20 bg-black/20 rounded-md lg:rounded-xl backdrop-blur-lg"
                 >
                   <p className="font-aspace text-xl py-2">{pass.name}</p>
                   <p className="font-aspace text-5xl py-2 font-bold text-transparent bg-clip-text bg-gradient-to-br from-cyan-400 to-blue-600 shadow-blue-500">
@@ -55,6 +55,14 @@ const Passes = () => {
               </Link>
             ))}
           </div>
+          <p className="text-white text-lg my-10 font-ubuntu my-20 text-center mx-auto">
+            For any query regarding registration/payment, contact:
+            <br />
+            Sowmick Rakesh S - 9500822248
+            <br />
+            Manish KS 86101 00305
+            <br />
+          </p>
         </section>
       </main>
       <Footer />

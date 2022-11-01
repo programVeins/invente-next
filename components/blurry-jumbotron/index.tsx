@@ -40,7 +40,7 @@ const BlurryJumbotron = () => {
               }}
             ></i>
           </div>
-          <Link href="/coming-soon">
+          <Link href="/workshops">
             <div className="text-lg lg:w-fit font-space flex gap-5 items-center justify-between mb-2 cursor-pointer text-yellow-500 rounded-lg px-2 py-1 bg-amber-700/30 font-bold">
               <div>Workshops</div>{" "}
               <i
@@ -67,7 +67,7 @@ const BlurryJumbotron = () => {
               }}
             ></i>
           </div>
-          <Link href="/coming-soon">
+          <Link href="/hackathon">
             <div className="text-lg lg:w-fit font-space flex gap-5 items-center justify-between mb-2 cursor-pointer text-pink-500 rounded-lg px-2 py-1 bg-rose-700/30 font-bold">
               <div>Hackathons</div>{" "}
               <i

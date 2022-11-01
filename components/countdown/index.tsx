@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const CountDown = () => {
-  const inventeDate = new Date();
-  inventeDate.setFullYear(2022);
-  inventeDate.setMonth(10);
-  inventeDate.setDate(3);
-  inventeDate.setHours(0);
-  inventeDate.setMinutes(0);
+  const inventeDate = new Date("2022-11-03T00:00:00.000Z");
 
   const [daysDiff, setdaysDiff] = useState(0);
   const [hoursDiff, sethoursDiff] = useState(0);
@@ -17,8 +12,8 @@ const CountDown = () => {
     if (inventeDate.getTime() - new Date().getTime() > 0) {
       const timer = setInterval(() => {
         const msDiff = inventeDate.getTime() - new Date().getTime();
-
         const daysDiff = Math.trunc(msDiff / (1000 * 3600 * 24));
+		console.log(inventeDate.toDateString());
         setdaysDiff(daysDiff);
         sethoursDiff(23 - new Date().getHours());
         setminutesDiff(59 - new Date().getMinutes());

@@ -1,5 +1,6 @@
 import React from "react";
 import BlurryCircle from "../components/blurry-circle";
+import Button from "../components/button";
 import Footer from "../components/footer";
 import Header from "../components/header/header";
 import Heading from "../components/heading";
@@ -34,13 +35,22 @@ const Contact = () => {
                 Payment).
               </li>
             </ul>
-            <p className="mb-40">
+            <p className="mb-10">
               For more details contact,
               <br />
               Boys hostel head, SSN: HARIHARAN S V - 9600603513
               <br />
               Girls hostel head, SSN: SHALENI ELAMTHENDRAL- 9894607939
             </p>
+            <div className="flex w-full justify-center mb-40">
+              <Button
+                action={() => {
+                  window.location.href = "https://forms.gle/NjEPmmXx2GNwJt4w5";
+                }}
+              >
+                Accomodation Link
+              </Button>
+            </div>
           </div>
         </section>
       </main>

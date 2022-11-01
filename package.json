@@ -7,11 +7,13 @@
   },
   "dependencies": {
     "@prisma/client": "4.4.0",
+    "apexcharts": "^3.36.0",
     "axios": "^1.0.0",
     "firebase": "^9.10.0",
     "firebase-admin": "^11.0.1",
     "next": "latest",
     "react": "18.1.0",
+    "react-apexcharts": "^1.4.0",
     "react-dom": "18.1.0",
     "react-hot-toast": "^2.4.0"
   },

@@ -24,6 +24,7 @@ const depts = Object.values(Department).filter(x => x != Department.MECH && x !=
 
 const SchedulePage: NextPage = () => {
     const [selectedDept, setSelectedDept] = useState<string>(depts[0]);
+
     return (
         <div className="bg-background min-h-screen">
             <Header />
@@ -59,7 +60,12 @@ const SchedulePage: NextPage = () => {
                 </div>
                 <div className="text-white p-10 rounded-lg lg:w-3/4  backdrop-blur-md bg-black/30 border-[0.02rem] border-gray-400 border-opacity-20">
                     <h3 className="font-ubuntu font-bold text-2xl mb-10">
-                        {selectedDept}
+                        {selectedDept === Department.BCOM ? 'SNUC Commerce' : selectedDept}{" "}
+                        {selectedDept != Department.IT && selectedDept != Department.BCOM &&
+                            selectedDept[selectedDept?.split(" ").length - 1] !=
+                            "engineering"
+                            ? "Engineering"
+                            : ""}
                     </h3>
                     <TimelineChart data={dataMap[selectedDept as Department]} />
                 </div>

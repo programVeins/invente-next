@@ -49,6 +49,10 @@ const SponsorsPage = () => {
               <img className="z-10 w-full" src="/images/sponsors/treat.png" />
               <img className="z-10 w-full" src="/images/sponsors/kalai.jpg" />
               <img className="z-10 w-full" src="/images/sponsors/rah.png" />
+              <img
+                className="z-10 w-full"
+                src="/images/sponsors/paysprint.png"
+              />
             </div>
           </div>
         </section>

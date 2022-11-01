@@ -19,6 +19,12 @@ const Footer = () => {
             src="/images/hari.png"
           />
         </a>
+        <a href="https://twitter.com/Amanrk28">
+          <img
+            className="cursor-pointer hover:scale-125 h-20 w-20 duration-300"
+            src="/images/aman.png"
+          />
+        </a>
       </div>
     </footer>
   );

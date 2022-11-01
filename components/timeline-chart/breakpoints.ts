@@ -85,6 +85,7 @@ export const smOptions: ApexOptions = {
             colors: ['#ffffff']
         },
         horizontalAlign: 'left',
+        offsetY: 120,
     },
     tooltip: {
         enabled: false,

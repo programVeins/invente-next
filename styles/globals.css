@@ -104,13 +104,7 @@ body {
 
 .flurry-bg:hover {
   transition: all ease 300ms;
-  background: linear-gradient(
-    -45deg,
-    #8152ee4a,
-    #3c47e74a,
-    #2382d54a,
-    #23d2d54a
-  );
+  background: linear-gradient(-45deg, #8152ee4a, #3c47e74a, #2382d54a, #23d2d54a);
   box-shadow: -20px 20px 50px -10px rgba(33, 70, 206, 0.47);
   filter: brightness(100%);
   background-size: 400% 400%;

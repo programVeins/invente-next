@@ -194,6 +194,9 @@ const EventPage = () => {
                 <p className="font-ubuntu">{selectedEventDetails?.time}</p>
               </div>
             </div>
+            {selectedEventDetails.event_name === "Reverse Gear " && (
+              <img src="/reverse.gif" className="w-full mt-10" />
+            )}
             {selectedEventDetails?.sections &&
               selectedEventDetails?.sections?.values?.map(
                 (

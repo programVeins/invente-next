@@ -34,7 +34,7 @@ export const chemData: ApexOptions['series'] = [
         ]
     },
     {
-        name: 'Chem Connexions',
+        name: 'Connexions',
         data: [
             {
                 x: 'Day 1',
@@ -161,7 +161,7 @@ export const chemData: ApexOptions['series'] = [
         ]
     },
     {
-        name: 'Chem Wordle',
+        name: 'Wordle',
         data: [
             {
 

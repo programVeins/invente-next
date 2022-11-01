@@ -110,8 +110,12 @@ export const smOptions: ApexOptions = {
     plotOptions: {
         bar: {
             horizontal: true,
+            barHeight: '100%'
         }
     },
+    chart: {
+        height: 400,
+    }
 }
 
 export const xsOptions = {

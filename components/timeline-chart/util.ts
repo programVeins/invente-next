@@ -262,7 +262,7 @@ const gradientStyle = {
 
 export const options: ApexOptions = {
     legend: {
-        show: false,
+        show: false
     },
     chart: {
         type: 'rangeBar',
@@ -278,6 +278,9 @@ export const options: ApexOptions = {
             horizontal: true,
             barHeight: '100%',
             rangeBarOverlap: true,
+            dataLabels: {
+                hideOverflowingLabels: false,
+            }
         }
     },
     xaxis: {
@@ -299,29 +302,27 @@ export const options: ApexOptions = {
         },
     },
     stroke: {
-        show: false,
+        show: true,
     },
     fill: {
         type: 'gradient',
         gradient: gradientStyle,
     },
     tooltip: {
-        enabled: true,
-        onDatasetHover: {
-            highlightDataSeries: true,
-        },
-        x: {
-            show: true,
-        },
-        y: {
-            title: {
-                formatter: (seriesName) => seriesName,
-            }
-        }
+        enabled: false,
     },
     dataLabels: {
         enabled: true,
-        formatter: (val, { seriesIndex, config }) => config.series[seriesIndex].name,
+        formatter: (val, { seriesIndex, config }) => {
+            let name = config.series[seriesIndex].name;
+            if (['Hexathlon', 'Trump the Aces', 'Data Utopia', 'IPL Auction', 'Mock Job Drive', 'Hacker\'s Asylum'].includes(name)) {
+                name = name.substring(0, 5) + '...';
+            }
+            if (['Expecto Perceptronum', 'Poster Presentation'].includes(name))
+                name = name.substring(0, 10) + '...';
+
+            return name;
+        },
         style: dataLabelStyle,
     },
     grid: {
@@ -356,7 +357,7 @@ export const options: ApexOptions = {
             options: smOptions
         },
         {
-            breakpoint: 400,
+            breakpoint: 450,
             options: xsOptions,
         }
     ]

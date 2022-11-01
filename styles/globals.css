@@ -167,6 +167,6 @@ body {
   .apexcharts-canvas,
   .apexcharts-svg,
   .apexcharts-svg foreignObject {
-    height: 300px !important;
+    height: 540px !important;
   }
 }

@@ -9,20 +9,6 @@ export const eceData: ApexOptions['series'] = [
                 x: 'Day 1',
                 y: [
                     dateFormatter(10,30),
-                    dateFormatter(11,0),
-                ],
-            },
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(11,0),
-                    dateFormatter(11,30),
-                ],
-            },
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(11,30),
                     dateFormatter(13,0),
                 ],
             },
@@ -61,13 +47,6 @@ export const eceData: ApexOptions['series'] = [
                 x: 'Day 1',
                 y: [
                     dateFormatter(13,45),
-                    dateFormatter(14,30),
-                ],
-            },
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(14,30),
                     dateFormatter(15,30),
                 ],
             },
@@ -92,13 +71,6 @@ export const eceData: ApexOptions['series'] = [
                 x: 'Day 1',
                 y: [
                     dateFormatter(12,30),
-                    dateFormatter(13,50),
-                ],
-            },
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(13,30),
                     dateFormatter(15,0),
                 ],
             },
@@ -111,7 +83,7 @@ export const eceData: ApexOptions['series'] = [
                 x: 'Day 1',
                 y: [
                     dateFormatter(9,30),
-                    dateFormatter(16,0)
+                    dateFormatter(15,0)
                 ]
             },
             {
@@ -138,13 +110,6 @@ export const eceData: ApexOptions['series'] = [
                 x: 'Day 2',
                 y: [
                     dateFormatter(13,30),
-                    dateFormatter(14,30)
-                ],
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(14,30),
                     dateFormatter(15,0)
                 ],
             },
@@ -208,13 +173,6 @@ export const eceData: ApexOptions['series'] = [
                 x: 'Day 2',
                 y: [
                     dateFormatter(9,0),
-                    dateFormatter(10,30),
-                ],
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(10,30),
                     dateFormatter(12,0)
                 ],
             }

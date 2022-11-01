@@ -46,7 +46,217 @@ const gradientStyle = {
                 offset: 100,
                 color: '#3BF5DA',
             }
-        ]
+        ],
+        [
+            {
+                offset: 0,
+                color: '#AD35DC',
+            },
+            {
+                offset: 10,
+                color: '#D53995',
+            },
+            {
+                offset: 100,
+                color: '#F43254',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#F17241',
+            },
+            {
+                offset: 10,
+                color: '#F2833F',
+            },
+            {
+                offset: 100,
+                color: '#F9B457',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#362DE3',
+            },
+            {
+                offset: 10,
+                color: '#3385E2',
+            },
+            {
+                offset: 100,
+                color: '#3BF5DA',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#AD35DC',
+            },
+            {
+                offset: 10,
+                color: '#D53995',
+            },
+            {
+                offset: 100,
+                color: '#F43254',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#F17241',
+            },
+            {
+                offset: 10,
+                color: '#F2833F',
+            },
+            {
+                offset: 100,
+                color: '#F9B457',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#362DE3',
+            },
+            {
+                offset: 10,
+                color: '#3385E2',
+            },
+            {
+                offset: 100,
+                color: '#3BF5DA',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#AD35DC',
+            },
+            {
+                offset: 10,
+                color: '#D53995',
+            },
+            {
+                offset: 100,
+                color: '#F43254',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#F17241',
+            },
+            {
+                offset: 10,
+                color: '#F2833F',
+            },
+            {
+                offset: 100,
+                color: '#F9B457',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#362DE3',
+            },
+            {
+                offset: 10,
+                color: '#3385E2',
+            },
+            {
+                offset: 100,
+                color: '#3BF5DA',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#AD35DC',
+            },
+            {
+                offset: 10,
+                color: '#D53995',
+            },
+            {
+                offset: 100,
+                color: '#F43254',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#F17241',
+            },
+            {
+                offset: 10,
+                color: '#F2833F',
+            },
+            {
+                offset: 100,
+                color: '#F9B457',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#362DE3',
+            },
+            {
+                offset: 10,
+                color: '#3385E2',
+            },
+            {
+                offset: 100,
+                color: '#3BF5DA',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#AD35DC',
+            },
+            {
+                offset: 10,
+                color: '#D53995',
+            },
+            {
+                offset: 100,
+                color: '#F43254',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#F17241',
+            },
+            {
+                offset: 10,
+                color: '#F2833F',
+            },
+            {
+                offset: 100,
+                color: '#F9B457',
+            }
+        ],
+        [
+            {
+                offset: 0,
+                color: '#362DE3',
+            },
+            {
+                offset: 10,
+                color: '#3385E2',
+            },
+            {
+                offset: 100,
+                color: '#3BF5DA',
+            }
+        ],
     ]
 }
 
@@ -56,7 +266,6 @@ export const options: ApexOptions = {
     },
     chart: {
         type: 'rangeBar',
-        height: '450px',
         offsetX: 60,
         toolbar: {
             show: false,
@@ -68,8 +277,7 @@ export const options: ApexOptions = {
     plotOptions: {
         bar: {
             horizontal: true,
-            barHeight: '90%',
-            borderRadius: 30,
+            barHeight: '100%',
             rangeBarOverlap: true,
         }
     },
@@ -87,7 +295,7 @@ export const options: ApexOptions = {
         labels: {
             style: {
                 ...axisStyle,
-                fontSize: '32px',
+                fontSize: '24px',
             }
         },
     },
@@ -103,12 +311,6 @@ export const options: ApexOptions = {
         onDatasetHover: {
             highlightDataSeries: true,
         },
-        fixed: {
-            enabled: true,
-            position: 'topLeft',
-        },
-        followCursor: true,
-        intersect: true,
         x: {
             show: true,
         },
@@ -157,89 +359,7 @@ export const options: ApexOptions = {
     ]
 };
 
-const dateFormatter = (hr: number, min: number) =>
+export const dateFormatter = (hr: number, min: number) =>
     min > 29 ?
     new Date(2022, 10, 3, hr+6, min+30-60).getTime() :
     new Date(2022, 10, 3, hr+5, min+30).getTime();
-
-export const series: ApexOptions['series'] = [
-    {
-        name: 'Websitica (prelims)',
-        data: [
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(9,0),
-                    dateFormatter(10,0),
-                ],
-            },
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(11,0),
-                    dateFormatter(12, 30),
-                ],
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(9,0),
-                    dateFormatter(11,30),
-                ],
-            },
-        ]
-    },
-    {
-        name: 'Papyrus',
-        data: [
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(9,30),
-                    dateFormatter(11,0),
-                ],
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(9,30),
-                    dateFormatter(11,0),
-                ],
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(12,0),
-                    dateFormatter(13,0),
-                ],
-            },
-        ]
-    },
-    {
-        name: 'Sysops(prelims)',
-        data: [
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(9,30),
-                    dateFormatter(11,0),
-                ],
-            },
-            {
-
-                x: 'Day 2',
-                y: [
-                    dateFormatter(9,30),
-                    dateFormatter(11,0),
-                ],
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(11,30),
-                    dateFormatter(12,30)
-                ],
-            }
-        ]
-    }
-]

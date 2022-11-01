@@ -72,7 +72,7 @@ const Header = () => {
               onClick={() => setShowingMenu(false)}
               className="font-ubuntu text-center my-4 text-xl"
             >
-              <Link href="/coming-soon">Schedule</Link>
+              <Link href="/schedule">Schedule</Link>
             </div>
             <div
               onClick={() => setShowingMenu(false)}

@@ -1,12 +1,13 @@
+import { ApexOptions } from 'apexcharts';
 import dynamic from 'next/dynamic'
-import { options, series } from './util';
+import { options } from './util';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-export const TimelineChart = () => {
+export const TimelineChart = ({ data }: { data: ApexOptions['series'] }) => {
     return (
         <main className="w-full m-auto">
-            <Chart options={options} series={series} type="rangeBar" height={450} />
+            <Chart options={options} series={data} type="rangeBar" width="100%" />
         </main>
     )
 }

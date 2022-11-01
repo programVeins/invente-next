@@ -23,7 +23,6 @@ export const xlOptions = {
         bar: {
             horizontal: true,
             barHeight: '80%',
-            borderRadius: 29,
             rangeBarOverlap: true,
         }
     },
@@ -41,7 +40,6 @@ export const lgOptions = {
         bar: {
             horizontal: true,
             barHeight: '60%',
-            borderRadius: 24,
             rangeBarOverlap: true,
         }
     },
@@ -64,7 +62,6 @@ export const mdOptions = {
         bar: {
             horizontal: true,
             barHeight: '40%',
-            borderRadius: 15,
             rangeBarOverlap: true,
         }
     },
@@ -95,7 +92,6 @@ export const smOptions = {
         bar: {
             horizontal: true,
             barHeight: '40%',
-            borderRadius: 15,
             rangeBarOverlap: true,
         }
     },

@@ -124,7 +124,7 @@ const Header = () => {
           <Link href="/hackathon">Hackathon</Link>
         </div>
         <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
-          <Link href="/coming-soon">Schedule</Link>
+          <Link href="/schedule">Schedule</Link>
         </div>
         <div className="hover:tracking-wide-wide hover:font-bold transition-all duration-300">
           <Link href="/coming-soon">Sponsors</Link>

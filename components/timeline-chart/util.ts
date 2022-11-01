@@ -1,5 +1,5 @@
 import { ApexOptions } from "apexcharts";
-import { axisStyle, dataLabelStyle, lgOptions, mdOptions, smOptions, xlOptions } from "./breakpoints";
+import { axisStyle, dataLabelStyle, lgOptions, mdOptions, smOptions, xlOptions, xsOptions } from "./breakpoints";
 
 const gridBorderColor = '#ccc';
 const gradientStyle = {
@@ -266,7 +266,6 @@ export const options: ApexOptions = {
     },
     chart: {
         type: 'rangeBar',
-        offsetX: 60,
         toolbar: {
             show: false,
         },
@@ -356,6 +355,10 @@ export const options: ApexOptions = {
             breakpoint: 640,
             options: smOptions
         },
+        {
+            breakpoint: 400,
+            options: xsOptions,
+        }
     ]
 };
 

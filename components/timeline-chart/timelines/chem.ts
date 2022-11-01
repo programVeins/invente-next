@@ -110,6 +110,25 @@ export const chemData: ApexOptions['series'] = [
         ]
     },
     {
+        name: 'Paper Presentation',
+        data: [
+            {
+                x: 'Day 1',
+                y: [
+                    dateFormatter(12,0),
+                    dateFormatter(13,30),
+                ],
+            },
+            {
+                x: 'Day 2',
+                y: [
+                    dateFormatter(11,0),
+                    dateFormatter(12,30),
+                ],
+            },
+        ]
+    },
+    {
         name: 'Poster Presentation',
         data: [
             {
@@ -157,25 +176,6 @@ export const chemData: ApexOptions['series'] = [
                 y: [
                     dateFormatter(12,30),
                     dateFormatter(14,0),
-                ],
-            },
-        ]
-    },
-    {
-        name: 'Paper Presentation',
-        data: [
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(12,0),
-                    dateFormatter(13,30),
-                ],
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(11,0),
-                    dateFormatter(12,30),
                 ],
             },
         ]

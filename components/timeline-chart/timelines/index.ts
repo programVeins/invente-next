@@ -5,3 +5,5 @@ export * from './ece';
 export * from './chem';
 export * from './civil';
 export * from './snucommerce';
+export * from './mech';
+export * from './bme';

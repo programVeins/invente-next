@@ -1,3 +1,5 @@
+import { ApexOptions } from "apexcharts";
+
 const fontFamily = 'Azonix';
 export const dataLabelStyle = {
     fontWeight: 500,
@@ -12,7 +14,7 @@ export const axisStyle = {
 }
 
 // Breakpoint: 1280px
-export const xlOptions = {
+export const xlOptions: ApexOptions = {
     dataLabels: {
         style: {
             ...dataLabelStyle,
@@ -22,38 +24,44 @@ export const xlOptions = {
     plotOptions: {
         bar: {
             horizontal: true,
-            barHeight: '80%',
             rangeBarOverlap: true,
         }
     },
 }
 
 // Breakpoint: 1024px
-export const lgOptions = {
+export const lgOptions: ApexOptions = {
     dataLabels: {
         style: {
             ...dataLabelStyle,
             fontSize: '10px'
         }
     },
+    tooltip: {
+        enabled: false,
+    },
     plotOptions: {
         bar: {
             horizontal: true,
-            barHeight: '60%',
             rangeBarOverlap: true,
         }
     },
 }
 
 // Breakpoint: 768px
-export const mdOptions = {
+export const mdOptions: ApexOptions = {
     legend: {
         show: true,
+        position: 'bottom',
         fontFamily,
         floating: true,
         labels: {
             colors: ['#ffffff']
-        }
+        },
+        horizontalAlign: 'left',
+    },
+    tooltip: {
+        enabled: false,
     },
     dataLabels: {
         enabled: false
@@ -61,21 +69,25 @@ export const mdOptions = {
     plotOptions: {
         bar: {
             horizontal: true,
-            barHeight: '40%',
             rangeBarOverlap: true,
         }
     },
 }
 
 // Breakpoint: 640px
-export const smOptions = {
+export const smOptions: ApexOptions = {
     legend: {
         show: true,
-        fontFamily,
+        position: 'bottom',
         floating: true,
+        fontFamily,
         labels: {
             colors: ['#ffffff']
-        }
+        },
+        horizontalAlign: 'left',
+    },
+    tooltip: {
+        enabled: false,
     },
     dataLabels: {
         enabled: false
@@ -84,16 +96,30 @@ export const smOptions = {
         labels: {
             style: {
                 ...axisStyle,
-                fontSize: '18px',
+                fontSize: '14px',
             }
         },
+    },
+    fill: {
+        type: 'gradient',
+        gradient: {
+            colorStops: []
+        }
     },
     plotOptions: {
         bar: {
             horizontal: true,
-            barHeight: '40%',
-            rangeBarOverlap: true,
         }
     },
+}
 
+export const xsOptions = {
+    yaxis: {
+        labels: {
+            style: {
+                ...axisStyle,
+                fontSize: '12px',
+            }
+        },
+    },
 }

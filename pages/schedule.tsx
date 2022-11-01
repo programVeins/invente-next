@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 import Header from "../components/header/header";
 import { TimelineChart } from "../components/timeline-chart";
 import VectorsBG from "../components/vectors-bg";
-import { cseData, chemData, civilData, itData, eceData, eeeData, snucData } from '../components/timeline-chart/timelines';
+import { cseData, chemData, civilData, itData, eceData, eeeData, snucData, mechData, bmeData } from '../components/timeline-chart/timelines';
 import { Department } from "../types";
 
 const dataMap = {
@@ -16,11 +16,11 @@ const dataMap = {
     [Department.ECE]: eceData,
     [Department.EEE]: eeeData,
     [Department.BCOM]: snucData,
-    [Department.BME]: itData,
-    [Department.MECH]: itData,
+    [Department.BME]: bmeData,
+    [Department.MECH]: mechData,
 }
 
-const depts = Object.values(Department).filter(x => x != Department.MECH && x != Department.CHEM);
+const depts = Object.values(Department);
 
 const SchedulePage: NextPage = () => {
     const [selectedDept, setSelectedDept] = useState<string>(depts[0]);
@@ -58,7 +58,7 @@ const SchedulePage: NextPage = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="text-white p-10 rounded-lg lg:w-3/4  backdrop-blur-md bg-black/30 border-[0.02rem] border-gray-400 border-opacity-20">
+                <div className="text-white p-5 md:p-10 rounded-lg lg:w-3/4 backdrop-blur-md bg-black/30 border-[0.02rem] border-gray-400 border-opacity-20">
                     <h3 className="font-ubuntu font-bold text-2xl mb-10">
                         {selectedDept === Department.BCOM ? 'SNUC Commerce' : selectedDept}{" "}
                         {selectedDept != Department.IT && selectedDept != Department.BCOM &&

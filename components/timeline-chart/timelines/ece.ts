@@ -3,25 +3,6 @@ import { dateFormatter } from "../util";
 
 export const eceData: ApexOptions['series'] = [
     {
-        name: 'HackInfinity',
-        data: [
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(9,30),
-                    dateFormatter(16,0)
-                ]
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(9,0),
-                    dateFormatter(15,0)
-                ]
-            },
-        ]
-    },
-    {
         name: 'Pitch-It-Please',
         data: [
             {
@@ -120,6 +101,25 @@ export const eceData: ApexOptions['series'] = [
                     dateFormatter(13,30),
                     dateFormatter(15,0),
                 ],
+            },
+        ]
+    },
+    {
+        name: 'HackInfinity',
+        data: [
+            {
+                x: 'Day 1',
+                y: [
+                    dateFormatter(9,30),
+                    dateFormatter(16,0)
+                ]
+            },
+            {
+                x: 'Day 2',
+                y: [
+                    dateFormatter(9,0),
+                    dateFormatter(15,0)
+                ]
             },
         ]
     },

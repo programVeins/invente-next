@@ -71,8 +71,8 @@ const Home: NextPage = () => {
   }, [user]);
 
   useEffect(() => {
-    // if (localStorage.getItem('hasSeenModal') == 'true')
-    //   setShowModal(false);
+    if (localStorage.getItem('hasSeenModal') == 'true')
+      setShowModal(false);
   }, []);
 
   const onClose = () => {

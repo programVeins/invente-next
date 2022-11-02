@@ -85,7 +85,7 @@ export const smOptions: ApexOptions = {
             colors: ['#ffffff']
         },
         horizontalAlign: 'left',
-        offsetY: 120,
+        offsetY: typeof window !== 'undefined' && typeof window.navigator !== 'undefined' && window.navigator && /iPad|iPhone|iPod/.test(window.navigator.userAgent) ? 120 : 0,
     },
     tooltip: {
         enabled: false,

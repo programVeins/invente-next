@@ -71,8 +71,8 @@ const Home: NextPage = () => {
   }, [user]);
 
   useEffect(() => {
-    if (localStorage.getItem('hasSeenModal') == 'true')
-      setShowModal(false);
+    // if (localStorage.getItem('hasSeenModal') == 'true')
+    //   setShowModal(false);
   }, []);
 
   const onClose = () => {
@@ -83,8 +83,8 @@ const Home: NextPage = () => {
   return (
     <div className={`bg-background min-h-screen ${showModal ? '' : ''}`}>
       {showModal ? (
-        <div className="w-screen h-screen">
-          <div className="fixed top-1/2 left-1/2 z-40 rounded-md -translate-x-1/2 -translate-y-1/2">
+        <div className="fixed w-screen h-screen z-40 bg-gray-900">
+          <div className="absolute top-1/2 left-1/2 z-40 rounded-md -translate-x-1/2 -translate-y-1/2">
             <div className="bg-transparent p-6 pt-8 rounded-t-md">
               <h1 className="text-4xl text-center text-white">
                 Latest Update

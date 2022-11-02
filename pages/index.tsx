@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AboutInvente from "../components/about-invente";
 import BlurryCircle from "../components/blurry-circle";
 import BlurryJumbotron from "../components/blurry-jumbotron";
@@ -60,6 +60,7 @@ export const depts = [
 
 const Home: NextPage = () => {
   const { user } = useAuth();
+  const [showModal, setShowModal] = useState(true);
 
   useEffect(() => {
     if (user) {
@@ -69,8 +70,35 @@ const Home: NextPage = () => {
     }
   }, [user]);
 
+  useEffect(() => {
+    if (localStorage.getItem('hasSeenModal') == 'true')
+      setShowModal(false);
+  }, []);
+
+  const onClose = () => {
+    localStorage.setItem('hasSeenModal', 'true');
+    setShowModal(false);
+  }
+
   return (
-    <div className="bg-background min-h-screen">
+    <div className={`bg-background min-h-screen ${showModal ? '' : ''}`}>
+      {showModal ? (
+        <div className="w-screen h-screen">
+          <div className="fixed top-1/2 left-1/2 z-40 rounded-md -translate-x-1/2 -translate-y-1/2">
+            <div className="bg-transparent p-6 pt-8 rounded-t-md">
+              <h1 className="text-4xl text-center text-white">
+                Latest Update
+              </h1>
+              <p className="text-xl text-white">
+                Sorry to inform you that Invente '22 has been postponed due to heavy rains
+              </p>
+            </div>
+            <div className="bg-transparent w-full px-6 py-4 flex justify-end">
+              <button className="w-fit bg-gray-800 text-white text-lg px-2 py-1 rounded border-[1px]" onClick={onClose}>Close</button>
+            </div>
+          </div>
+        </div>
+      ) : null}
       <main>
         <Header />
         <VectorsBG />
@@ -80,7 +108,6 @@ const Home: NextPage = () => {
             <div className="flex flex-col justify-center items-center mt-40 lg:mt-20">
               <div className="hidden w-full md:flex items-start lg:-mt-20 justify-evenly">
                 <img src="/vectors/ssn.svg" className="w-80 h-80 lg:scale-50" />
-
                 <div className="flex flex-col">
                   <img
                     className="mt-[12rem] mb-[1rem] h-14 mx-auto w-[200px] z-10"

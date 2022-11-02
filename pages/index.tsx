@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import AboutInvente from "../components/about-invente";
 import BlurryCircle from "../components/blurry-circle";
 import BlurryJumbotron from "../components/blurry-jumbotron";
+import Button from "../components/button";
 import CountDown from "../components/countdown";
 import EventGrid from "../components/event-grid";
 import Footer from "../components/footer";
@@ -71,31 +72,36 @@ const Home: NextPage = () => {
   }, [user]);
 
   useEffect(() => {
-    if (localStorage.getItem('hasSeenModal') == 'true')
-      setShowModal(false);
+    if (localStorage.getItem("hasSeenModal") == "true") setShowModal(false);
   }, []);
 
   const onClose = () => {
-    localStorage.setItem('hasSeenModal', 'true');
+    localStorage.setItem("hasSeenModal", "true");
     setShowModal(false);
-  }
+  };
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.classList.add("stop-scrolling");
+    } else {
+      document.body.classList.remove("stop-scrolling");
+    }
+  }, [showModal]);
 
   return (
-    <div className={`bg-background min-h-screen ${showModal ? '' : ''}`}>
+    <div className={`bg-background min-h-screen ${showModal ? "" : ""}`}>
       {showModal ? (
-        <div className="fixed w-screen h-screen z-40 bg-gray-900">
-          <div className="absolute top-1/2 left-1/2 z-40 rounded-md -translate-x-1/2 -translate-y-1/2">
-            <div className="bg-transparent p-6 pt-8 rounded-t-md">
-              <h1 className="text-4xl text-center text-white">
-                Latest Update
-              </h1>
-              <p className="text-xl text-white">
-                Sorry to inform you that Invente '22 has been postponed due to heavy rains
-              </p>
-            </div>
-            <div className="bg-transparent w-full px-6 py-4 flex justify-end">
-              <button className="w-fit bg-gray-800 text-white text-lg px-2 py-1 rounded border-[1px]" onClick={onClose}>Close</button>
-            </div>
+        <div className="fixed top-0 p-10 h-screen text-center flex flex-col justify-center items-center w-screen min-w-screen min-h-screen z-50 bg-gray-900">
+          <h1 className="text-2xl lg:text-5xl text-center font-azonix text-white">
+            Latest Update
+          </h1>
+          <p className="text-lg lg:text-3xl font-ubuntu my-10 text-white">
+            Sorry to inform you that Invente '22 has been postponed due to heavy
+            rains
+          </p>
+
+          <div className="bg-transparent w-full px-6 py-4 flex justify-center">
+            <Button action={() => onClose()}>Okay</Button>
           </div>
         </div>
       ) : null}
@@ -117,8 +123,8 @@ const Home: NextPage = () => {
                     presents
                   </p>
                   <img
-                    src="/vectors/invente.svg"
-                    className="mt-[2rem] mb-[5rem] scale-[1.7]"
+                    src="/vectors/invente.png"
+                    className="mt-[2rem] mb-[2rem]"
                   />
                   <p className="text-center text-white font-ubuntu text-2xl">
                     Powered by
@@ -137,13 +143,17 @@ const Home: NextPage = () => {
                 <img src="/vectors/snu.svg" className="w-24 h-24" />
               </div>
               <img
-                src="/vectors/invente.svg"
+                src="/vectors/invente.png"
                 className="md:hidden px-2 scale-95 my-10"
               />
               <div className="flex flex-col w-1/2 z-10 mb-10 mx-auto lg:hidden gap-10 opacity-100">
                 <img className="" src="/images/sponsors/tmb.png" />
                 <img className="" src="/images/sponsors/sattva.png" />
               </div>
+            </div>
+            <div className="text-white font-ubuntu w-3/4 lg:w-1/2 mx-auto text-xl lg:text-3xl text-center my-10">
+              Invente has been postponed to December 1 and 2 due to heavy rains.
+              We regret the inconvenience caused.
             </div>
             <CountDown />
             <div className="mt-40">

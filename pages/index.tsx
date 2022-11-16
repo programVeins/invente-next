@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AboutInvente from "../components/about-invente";
 import BlurryCircle from "../components/blurry-circle";
 import BlurryJumbotron from "../components/blurry-jumbotron";
-import Button from "../components/button";
 import CountDown from "../components/countdown";
 import EventGrid from "../components/event-grid";
 import Footer from "../components/footer";
@@ -61,7 +60,6 @@ export const depts = [
 
 const Home: NextPage = () => {
   const { user } = useAuth();
-  const [showModal, setShowModal] = useState(true);
 
   useEffect(() => {
     if (user) {
@@ -71,25 +69,8 @@ const Home: NextPage = () => {
     }
   }, [user]);
 
-  useEffect(() => {
-    if (localStorage.getItem("hasSeenModal") == "true") setShowModal(false);
-  }, []);
-
-  const onClose = () => {
-    localStorage.setItem("hasSeenModal", "true");
-    setShowModal(false);
-  };
-
-  useEffect(() => {
-    if (showModal) {
-      document.body.classList.add("stop-scrolling");
-    } else {
-      document.body.classList.remove("stop-scrolling");
-    }
-  }, [showModal]);
-
   return (
-    <div className={`bg-background min-h-screen ${showModal ? "" : ""}`}>
+    <div className={`bg-background min-h-screen`}>
       <main>
         <Header />
         <VectorsBG />

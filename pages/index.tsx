@@ -90,21 +90,6 @@ const Home: NextPage = () => {
 
   return (
     <div className={`bg-background min-h-screen ${showModal ? "" : ""}`}>
-      {showModal ? (
-        <div className="fixed top-0 p-10 h-screen text-center flex flex-col justify-center items-center w-screen min-w-screen min-h-screen z-50 bg-gray-900">
-          <h1 className="text-2xl lg:text-5xl text-center font-azonix text-white">
-            Latest Update
-          </h1>
-          <p className="text-lg lg:text-3xl font-ubuntu my-10 text-white">
-            Sorry to inform you that Invente '22 has been postponed due to heavy
-            rains
-          </p>
-
-          <div className="bg-transparent w-full px-6 py-4 flex justify-center">
-            <Button action={() => onClose()}>Okay</Button>
-          </div>
-        </div>
-      ) : null}
       <main>
         <Header />
         <VectorsBG />

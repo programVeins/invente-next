@@ -33,10 +33,10 @@ const SponsorsPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-20 place-content-center place-items-center gap-40">
               <img className="z-10 w-full" src="/images/sponsors/celcom.png" />
-              <img className="z-10 w-full" src="/images/sponsors/cgvak.png" />
+              <img className="z-10 w-full rounded-3xl" src="/images/sponsors/cgvak.png" />
 
               <img className="z-10 w-full" src="/images/sponsors/do.png" />
-              <img className="z-10 w-full" src="/images/sponsors/dukes.png" />
+              <img className="z-10 w-full rounded-3xl" src="/images/sponsors/dukes.png" />
 
               <img className="z-10 w-full" src="/images/sponsors/ieee.png" />
               <img className="z-10 w-full" src="/images/sponsors/in2.png" />
@@ -46,7 +46,7 @@ const SponsorsPage = () => {
               <img className="z-10 w-full" src="/images/sponsors/leo.png" />
 
               <img className="z-10 w-full" src="/images/sponsors/magilhub.png" />
-              <img className="z-10 w-full" src="/images/sponsors/manya.png" />
+              <img className="z-10 w-full rounded-3xl" src="/images/sponsors/manya.png" />
 
               <img className="z-10 w-full" src="/images/sponsors/nat.png" />
 
@@ -59,7 +59,7 @@ const SponsorsPage = () => {
               <img className="z-10 w-full" src="/images/sponsors/sac.png" />
               <img className="z-10 w-full" src="/images/sponsors/sakthi.png" />
               <img className="z-10 w-full" src="/images/sponsors/servo.png" />
-              <img className="z-10 w-full" src="/images/sponsors/suba.png" />
+              <img className="z-10 w-full rounded-3xl" src="/images/sponsors/suba.png" />
 
               <img className="z-10 w-full" src="/images/sponsors/toyota.png" />
               <img className="z-10 w-full" src="/images/sponsors/treat.png" />

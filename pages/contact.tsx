@@ -23,7 +23,7 @@ const Contact = () => {
             <p className="my-10"></p>
 
             <Heading title="For Event Related Queries" />
-            <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-10">
 
               <div className="my-6">
                 <p className="font-bold">IT</p>

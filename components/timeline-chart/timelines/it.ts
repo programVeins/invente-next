@@ -15,25 +15,6 @@ export const itData: ApexOptions['series'] = [
         ]
     },
     {
-        name: 'Websitica',
-        data: [
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(11,0),
-                    dateFormatter(12,0),
-                ],
-            },
-            {
-                x: 'Day 1',
-                y: [
-                    dateFormatter(13,0),
-                    dateFormatter(15,30),
-                ],
-            },
-        ]
-    },
-    {
         name: 'Papyrus',
         data: [
             {
@@ -46,22 +27,22 @@ export const itData: ApexOptions['series'] = [
         ]
     },
     {
-        name: 'Reverse Gear',
+        name: 'Brand It!',
         data: [
             {
                 x: 'Day 1',
                 y: [
-                    dateFormatter(11,0),
-                    dateFormatter(12,0),
+                    dateFormatter(10,30),
+                    dateFormatter(12,30),
                 ],
             },
             {
                 x: 'Day 1',
                 y: [
-                    dateFormatter(13,0),
-                    dateFormatter(15,30),
+                    dateFormatter(13,30),
+                    dateFormatter(15,30)
                 ],
-            },
+            }
         ]
     },
     {
@@ -77,6 +58,26 @@ export const itData: ApexOptions['series'] = [
         ]
     },
     {
+        name: 'Sysops',
+        data: [
+            {
+
+                x: 'Day 1',
+                y: [
+                    dateFormatter(10,30),
+                    dateFormatter(12,0),
+                ],
+            },
+            {
+                x: 'Day 1',
+                y: [
+                    dateFormatter(12,30),
+                    dateFormatter(15,30)
+                ],
+            }
+        ]
+    },
+    {
         name: 'Kickoff',
         data: [
             {
@@ -84,6 +85,44 @@ export const itData: ApexOptions['series'] = [
                 y: [
                     dateFormatter(12,0),
                     dateFormatter(15,30),
+                ],
+            },
+        ]
+    },
+    {
+        name: 'Reverse Gear',
+        data: [
+            {
+                x: 'Day 2',
+                y: [
+                    dateFormatter(11,0),
+                    dateFormatter(12,0),
+                ],
+            },
+            {
+                x: 'Day 2',
+                y: [
+                    dateFormatter(13,0),
+                    dateFormatter(15,30),
+                ],
+            },
+        ]
+    },
+    {
+        name: 'Websitica',
+        data: [
+            {
+                x: 'Day 2',
+                y: [
+                    dateFormatter(10,0),
+                    dateFormatter(11,0),
+                ],
+            },
+            {
+                x: 'Day 2',
+                y: [
+                    dateFormatter(12,0),
+                    dateFormatter(15,0),
                 ],
             },
         ]
@@ -104,45 +143,6 @@ export const itData: ApexOptions['series'] = [
                 y: [
                     dateFormatter(11,0),
                     dateFormatter(13,0)
-                ],
-            }
-        ]
-    },
-    {
-        name: 'Sysops',
-        data: [
-            {
-
-                x: 'Day 2',
-                y: [
-                    dateFormatter(10,0),
-                    dateFormatter(11,0),
-                ],
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(12,0),
-                    dateFormatter(15,0)
-                ],
-            }
-        ]
-    },
-    {
-        name: 'Brand It!',
-        data: [
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(10,0),
-                    dateFormatter(12,0),
-                ],
-            },
-            {
-                x: 'Day 2',
-                y: [
-                    dateFormatter(13,0),
-                    dateFormatter(15,30)
                 ],
             }
         ]

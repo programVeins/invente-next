@@ -17,7 +17,7 @@ export const getWorkshopDetails = (name: string) => {
         size: "",
         department: Department.IT,
         venue: "Main Auditorium",
-        time: "Nov 4: 10am to 12pm",
+        time: "Dec 2: 10am to 12pm",
         sections: {
           values: [
             {
@@ -42,8 +42,8 @@ export const getWorkshopDetails = (name: string) => {
         type: EventType.Team,
         size: "",
         department: Department.IT,
-        venue: "TBD",
-        time: "TBD",
+        venue: "Main Auditorium",
+        time: "Dec 1: 11am to 1pm",
         sections: {
           values: [],
         },
@@ -57,8 +57,8 @@ export const getWorkshopDetails = (name: string) => {
         type: EventType.Team,
         size: "",
         department: Department.IT,
-        venue: "TBD",
-        time: "TBD",
+        venue: "Mini Auditorium",
+        time: "Dec 1: 1pm to 3.30pm",
         sections: {
           values: [],
         },

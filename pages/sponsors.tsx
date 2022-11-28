@@ -20,7 +20,7 @@ const SponsorsPage = () => {
           </h1>
           <div className="font-ubuntu z-10 lg:text-2xl text-white w-2/3 mx-auto">
             <div className="flex flex-col w-full mx-auto text-center gap-10 mt-20">
-              <div className="w-full md:w-1/2 mx-auto">
+              <div className="w-full z-10 md:w-1/2 mx-auto">
                 <p className="mb-4">Title Sponsor</p>
                 <img
                   className="h-40 z-10 lg:h-40"
@@ -31,7 +31,7 @@ const SponsorsPage = () => {
               <p>Powered By</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-20 w-full">
-                <div className="flex flex-col justify-center">
+                <div className="flex z-10 flex-col justify-center">
                   <img
                     className="z-10 h-24 w-full"
                     src="/images/sponsors/sattva.png"

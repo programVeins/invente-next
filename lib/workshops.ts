@@ -38,14 +38,24 @@ export const getWorkshopDetails = (name: string) => {
       return {
         id: "optics",
         event_name: "Optics Workshop",
-        description: `Optical sensors are used to detect light intensities and then translate them into a readble form . They are known to play a contributing factor to the rise of the Industry 4.0, focusing on vision, physical sensing, chemical sensing, and sensor multiplexing.  Fiber optic communications is one another most sought-after technology that they bring impact to. We are here to bring you a workshop on such a predominant innovation! SSNSNUC is here to help you give a hands-on experience and a lucid explanation on how to use MATLAB and Optigrating software to design optical sensors.This workshop will be conducted by an expert in this field, Dr.Srijith. K. He is an Assistant Professor in the Department of ECE at IIITDM Kancheepuram. His research interests are primarily in developing fiber optic sensor solutions for various applications using fiber Bragg gratings and distributed fiber optic sensors. Join us on November 3rd to explore the software tools and utilize this opportunity to the best!!`,
+        description: `Optical sensors are used to detect light intensities and then translate them into a readable form, contributing to the rise of the Industry 4.0.Industrial, consumer, healthcare, and automotive fields and  what not! Wanna wander wide  …then join the workshop on OPTIC SENSOR DESIGN and dig deep with a great lecture and get a hands on experience  on how to use MATLAB and Optigrating software to design optical sensors.`,
         type: EventType.Team,
         size: "",
         department: Department.IT,
-        venue: "Main Auditorium",
+        venue: "Civil Department - Seminal Hall",
         time: "Dec 1: 11am to 1pm",
         sections: {
-          values: [],
+          values: [
+            {
+              sectionName: "Workshop Benefits",
+              sectionData: "Certificates will be provided ",
+            },
+            {
+              sectionName: "About the Speaker",
+              sectionData:
+                "Dr.Srijith. K, Assistant Professor in the Department of ECE at IIITDM Kancheepuram ",
+            },
+          ],
         },
       } as Event;
 

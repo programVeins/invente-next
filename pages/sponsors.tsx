@@ -104,7 +104,6 @@ const SponsorsPage = () => {
               <img className="z-10 w-full" src="/images/sponsors/sakthi.png" />
               <img className="z-10 w-full" src="/images/sponsors/servo.png" />
 
-              <img className="z-10 w-3/4" src="/images/sponsors/toyota.png" />
               <img className="z-10 w-full" src="/images/sponsors/treat.png" />
               <img className="z-10 w-full" src="/images/sponsors/ts.svg" />
 

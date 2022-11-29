@@ -117,11 +117,6 @@ const Home: NextPage = () => {
                 <img className="" src="/images/sponsors/sattva.png" />
               </div>
             </div>
-            <div className="text-white font-ubuntu w-3/4 lg:w-1/2 mx-auto text-lg lg:text-xl text-center my-10">
-              Invente has been postponed from November 3 and 4 to{" "}
-              <b>December 1 and 2</b> due to heavy rains. We regret the
-              inconvenience caused.
-            </div>
             <CountDown />
             <div className="mt-40">
               <BlurryJumbotron />

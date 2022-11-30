@@ -80,12 +80,6 @@ const PassesInfoPage = () => {
             </li>
           </ul>
           <a
-            href="https://axisbpayments.razorpay.com/ssn-snuc-Invente"
-            className="flex w-full justify-center mb-10"
-          >
-            <Button>Payment Portal</Button>
-          </a>
-          <a
             href={getPassLink(pass as string)}
             className="flex w-full justify-center mb-20"
           >
